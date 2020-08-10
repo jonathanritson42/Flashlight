@@ -59,8 +59,10 @@ Material:
     m_Floats:
     - Boolean_4E36A969: 0
     - Boolean_9EEE530A: 1
-    - Vector1_5CA38AB4: 0
+    - Boolean_E0732B0: 1
+    - Vector1_5CA38AB4: 1
     - Vector1_9509840D: 30
+    - Vector1_96B9559A: 1.2751869
     - Vector1_E5C872D: 0.5
     - Vector1_EFF04D23: 0
     - _BumpScale: 1
