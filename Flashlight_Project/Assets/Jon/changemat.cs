@@ -18,8 +18,9 @@ public class changemat : MonoBehaviour
 
     private void Update()
     {
-        changematerial.SetFloat("timer", timerincrease);
-        timerincrease += 0.001f;
+        changematerial.SetFloat("Vector1_96B9559A", timerincrease);
+        timerincrease += 0.0002f;
+        print(changematerial.GetFloat("Vector1_96B9559A"));
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,15 +45,18 @@ public class changemat : MonoBehaviour
     {
         if (other.gameObject.GetComponent<flashlight>())
         {
-            StopCoroutine(delayswap());
+            timerincrease = 0;
             this.GetComponent<MeshRenderer>().material = startingmat;
+            StopCoroutine(delayswap());
         }
     }
 
     IEnumerator delayswap()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(12);
 
         this.GetComponent<MeshRenderer>().material = endmat;
+        timerincrease = 0;
+
     }
 }
