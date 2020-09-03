@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 21330237}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,6 +214,33 @@ Transform:
   m_Father: {fileID: 1094881928}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &26686276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 34117114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &26686280 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 34117114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &26686281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26686276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc985c923669dd42919d38c0931cfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevelPortal: {fileID: 1459216451}
+  CurrentLevelPortal: {fileID: 1708262448}
+  taskCounter: 0
 --- !u!1001 &34117114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -240,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -333,7 +360,7 @@ GameObject:
   - component: {fileID: 63226737}
   - component: {fileID: 63226736}
   m_Layer: 0
-  m_Name: ColliderPlane
+  m_Name: ColliderPlane1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,11 +389,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 63226734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7412d3ff6b923d4eb5108525417986f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eca9637bc205d742a4e31dc9046d358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2143197229}
-  reciever: {fileID: 506863143}
+  player: {fileID: 26686280}
+  receiver: {fileID: 506863143}
 --- !u!65 &63226737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1249,7 +1276,7 @@ GameObject:
   - component: {fileID: 506863145}
   - component: {fileID: 506863144}
   m_Layer: 0
-  m_Name: ColliderPlane
+  m_Name: ColliderPlane2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1278,11 +1305,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 506863142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7412d3ff6b923d4eb5108525417986f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eca9637bc205d742a4e31dc9046d358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2143197229}
-  reciever: {fileID: 63226735}
+  player: {fileID: 26686280}
+  receiver: {fileID: 63226735}
 --- !u!65 &506863145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2028,9 +2055,9 @@ GameObject:
   - component: {fileID: 1459216454}
   - component: {fileID: 1459216453}
   - component: {fileID: 1459216452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2433,9 +2460,9 @@ GameObject:
   - component: {fileID: 1708262451}
   - component: {fileID: 1708262450}
   - component: {fileID: 1708262449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3171,9 +3198,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119804969}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2143197229 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
-    type: 3}
-  m_PrefabInstance: {fileID: 34117114}
-  m_PrefabAsset: {fileID: 0}
