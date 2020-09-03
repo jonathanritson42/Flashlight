@@ -51,29 +51,13 @@ public class dooranimation : MonoBehaviour
     {
         dist = Vector3.Distance(this.transform.position, player.transform.position);
 
-        if (dist < 4.5 && !proximity)                       // Detection distance 
-        {
-            textpopup.gameObject.SetActive(false);
-        }
-
-        if (dist < 4 && !proximity)                         // Detection distance 
-        {
-            textpopup.gameObject.SetActive(true);
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                textpopup.gameObject.SetActive(false);
-                animate();
-            }
-        }
-
         if (dist < proxdist && proximity) 
         {
             animate();
         }
     }
 
-    void animate()
+    public void animate()
     {
         print("animate");
 
