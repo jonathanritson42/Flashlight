@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: 4179d7c965e2d1b4e93707379b56f405
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7498698955668742203
+    second: White Puff Sheet_0
+  - first:
+      213: -7762006733012269605
+    second: White Puff Sheet_1
+  - first:
+      213: -2131979911682997225
+    second: White Puff Sheet_2
+  - first:
+      213: 4119912959455536354
+    second: White Puff Sheet_3
+  - first:
+      213: 5153809702493832821
+    second: White Puff Sheet_4
+  - first:
+      213: 5503529787633591611
+    second: White Puff Sheet_5
+  - first:
+      213: -8695117280690245242
+    second: White Puff Sheet_6
+  - first:
+      213: 6066177464234909381
+    second: White Puff Sheet_7
+  - first:
+      213: 6499944146984158882
+    second: White Puff Sheet_8
+  - first:
+      213: -8793547006195772685
+    second: White Puff Sheet_9
+  - first:
+      213: 2869186701076233075
+    second: White Puff Sheet_10
+  - first:
+      213: -3370418564112916249
+    second: White Puff Sheet_11
+  - first:
+      213: 6072480803107087719
+    second: White Puff Sheet_12
+  - first:
+      213: 972818088744785605
+    second: White Puff Sheet_13
+  - first:
+      213: 2037886575336987273
+    second: White Puff Sheet_14
+  - first:
+      213: -1046076571806410708
+    second: White Puff Sheet_15
+  - first:
+      213: 7305119578016352348
+    second: White Puff Sheet_16
+  - first:
+      213: 1244429763582662993
+    second: White Puff Sheet_17
+  - first:
+      213: -2445463520510230461
+    second: White Puff Sheet_18
+  - first:
+      213: 3210157170137791766
+    second: White Puff Sheet_19
+  - first:
+      213: -6591830149868537633
+    second: White Puff Sheet_20
+  - first:
+      213: 8939762492317713657
+    second: White Puff Sheet_21
+  - first:
+      213: 5005514696019487427
+    second: White Puff Sheet_22
+  - first:
+      213: -652471600418583543
+    second: White Puff Sheet_23
+  - first:
+      213: -3042648059790145509
+    second: White Puff Sheet_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: White Puff Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1668
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf95c597054fe790800000000000000
+      internalID: -7498698955668742203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1668
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd50d9e4000d74490800000000000000
+      internalID: -7762006733012269605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 1668
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714cdd7e09fa962e0800000000000000
+      internalID: -2131979911682997225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1668
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e420e5220fdc2930800000000000000
+      internalID: 4119912959455536354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 1668
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5764b1d4e92068740800000000000000
+      internalID: 5153809702493832821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1251
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b356ea2de27706c40800000000000000
+      internalID: 5503529787633591611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1251
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681f814e6ecb45780800000000000000
+      internalID: -8695117280690245242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 1251
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce933483446f2450800000000000000
+      internalID: 6066177464234909381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1251
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6ced473c0743a50800000000000000
+      internalID: 6499944146984158882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 1251
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2500c869b07f580800000000000000
+      internalID: -8793547006195772685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 834
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b7cef5a1661d720800000000000000
+      internalID: 2869186701076233075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 834
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0eaa55c2ed931d0800000000000000
+      internalID: -3370418564112916249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 834
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765a396fd19c54450800000000000000
+      internalID: 6072480803107087719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 834
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c615b2c5e4208d00800000000000000
+      internalID: 972818088744785605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 834
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a9f770b07084c10800000000000000
+      internalID: 2037886575336987273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 417
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28de9976e69b71f0800000000000000
+      internalID: -1046076571806410708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 417
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c588a615d8ff06560800000000000000
+      internalID: 7305119578016352348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 417
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1599446d64a154110800000000000000
+      internalID: 1244429763582662993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 417
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340cfcc72e7ff0ed0800000000000000
+      internalID: -2445463520510230461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 417
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d7c3720f4cc8c20800000000000000
+      internalID: 3210157170137791766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd83069576d1584a0800000000000000
+      internalID: -6591830149868537633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 0
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f445f23f9a601c70800000000000000
+      internalID: 8939762492317713657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 0
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca2d3e7819277540800000000000000
+      internalID: 5005514696019487427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 0
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c050f4984f1f6f0800000000000000
+      internalID: -652471600418583543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White Puff Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 0
+        width: 419
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b184da3d5b756c5d0800000000000000
+      internalID: -3042648059790145509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 216b32bd759e31d4c9753559c744e56e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

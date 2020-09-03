@@ -1,0 +1,788 @@
+fileFormatVersion: 2
+guid: a429c13f010f96d469065314b9471ae1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 985270205039256745
+    second: Black Smoke Sheet_0
+  - first:
+      213: 748730101120594287
+    second: Black Smoke Sheet_1
+  - first:
+      213: -8617695375376911870
+    second: Black Smoke Sheet_2
+  - first:
+      213: -4916910435622238423
+    second: Black Smoke Sheet_3
+  - first:
+      213: 5612094692757443666
+    second: Black Smoke Sheet_4
+  - first:
+      213: -8711824098051751118
+    second: Black Smoke Sheet_5
+  - first:
+      213: 6779425449286319582
+    second: Black Smoke Sheet_6
+  - first:
+      213: -6446236242123708442
+    second: Black Smoke Sheet_7
+  - first:
+      213: -3230174719762338295
+    second: Black Smoke Sheet_8
+  - first:
+      213: 651246579527570376
+    second: Black Smoke Sheet_9
+  - first:
+      213: 160306933209848636
+    second: Black Smoke Sheet_10
+  - first:
+      213: -8927976539514226387
+    second: Black Smoke Sheet_11
+  - first:
+      213: -4090199344563258433
+    second: Black Smoke Sheet_12
+  - first:
+      213: 951287327983631274
+    second: Black Smoke Sheet_13
+  - first:
+      213: 5774902846893729179
+    second: Black Smoke Sheet_14
+  - first:
+      213: -6909365656157873471
+    second: Black Smoke Sheet_15
+  - first:
+      213: -6591723087963380616
+    second: Black Smoke Sheet_16
+  - first:
+      213: 7190789666867808933
+    second: Black Smoke Sheet_17
+  - first:
+      213: -3256752725945202192
+    second: Black Smoke Sheet_18
+  - first:
+      213: 9082834645184006582
+    second: Black Smoke Sheet_19
+  - first:
+      213: 3821148471426481547
+    second: Black Smoke Sheet_20
+  - first:
+      213: 5477066061850943143
+    second: Black Smoke Sheet_21
+  - first:
+      213: 2760332256387919819
+    second: Black Smoke Sheet_22
+  - first:
+      213: 831592780209698807
+    second: Black Smoke Sheet_23
+  - first:
+      213: 4238976766430668689
+    second: Black Smoke Sheet_24
+  - first:
+      213: 3452304794454104378
+    second: Black Smoke Sheet_0
+  - first:
+      213: 821734540138643330
+    second: Black Smoke Sheet_1
+  - first:
+      213: 3697622042208563928
+    second: Black Smoke Sheet_2
+  - first:
+      213: -1143851483648669533
+    second: Black Smoke Sheet_3
+  - first:
+      213: 7682993454732834208
+    second: Black Smoke Sheet_4
+  - first:
+      213: 4351738501687442797
+    second: Black Smoke Sheet_5
+  - first:
+      213: -3819750525745829505
+    second: Black Smoke Sheet_6
+  - first:
+      213: 2349195851056143311
+    second: Black Smoke Sheet_7
+  - first:
+      213: -3250773532032554128
+    second: Black Smoke Sheet_8
+  - first:
+      213: 8647541192985460927
+    second: Black Smoke Sheet_9
+  - first:
+      213: 376191149219111864
+    second: Black Smoke Sheet_10
+  - first:
+      213: 2621137530390974483
+    second: Black Smoke Sheet_11
+  - first:
+      213: 7475981651781580328
+    second: Black Smoke Sheet_12
+  - first:
+      213: -4072213822085845323
+    second: Black Smoke Sheet_13
+  - first:
+      213: 8222894720244729766
+    second: Black Smoke Sheet_14
+  - first:
+      213: 979849617569865542
+    second: Black Smoke Sheet_15
+  - first:
+      213: 6093102055346616171
+    second: Black Smoke Sheet_16
+  - first:
+      213: -4118777993495162876
+    second: Black Smoke Sheet_17
+  - first:
+      213: 7690750748068103197
+    second: Black Smoke Sheet_18
+  - first:
+      213: -7136310549781939600
+    second: Black Smoke Sheet_19
+  - first:
+      213: -8204676036499568740
+    second: Black Smoke Sheet_20
+  - first:
+      213: -3387835304085658938
+    second: Black Smoke Sheet_21
+  - first:
+      213: -7469750207097996078
+    second: Black Smoke Sheet_22
+  - first:
+      213: -5311322115489780778
+    second: Black Smoke Sheet_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Black Smoke Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 0
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197eb36f8eed3da30800000000000000
+      internalID: 4238976766430668689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1660
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3990d16bec09ef20800000000000000
+      internalID: 3452304794454104378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1660
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ff1a4e533676b00800000000000000
+      internalID: 821734540138643330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1660
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2fe7318a7905330800000000000000
+      internalID: 3697622042208563928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1660
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a84151d2293020f0800000000000000
+      internalID: -1143851483648669533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 1660
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5700147d97f9a60800000000000000
+      internalID: 7682993454732834208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1245
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d787c5c1b746c30800000000000000
+      internalID: 4351738501687442797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1245
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79ee4e72258dfac0800000000000000
+      internalID: -3819750525745829505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1245
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbd5021e250a9020800000000000000
+      internalID: 2349195851056143311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1245
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b25f922bee2e2d0800000000000000
+      internalID: -3250773532032554128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 1245
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0c47cf5ec320870800000000000000
+      internalID: 8647541192985460927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 830
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3e9d86bdf783500800000000000000
+      internalID: 376191149219111864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 830
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310166e42b6206420800000000000000
+      internalID: 2621137530390974483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 830
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82677cde3b500c760800000000000000
+      internalID: 7475981651781580328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 830
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be2325ba179c77c0800000000000000
+      internalID: -4072213822085845323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 830
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a74f996e279d1270800000000000000
+      internalID: 8222894720244729766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 415
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fdd842900299d00800000000000000
+      internalID: 979849617569865542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 415
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b673325690c0f8450800000000000000
+      internalID: 6093102055346616171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 415
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4005605bc3927d6c0800000000000000
+      internalID: -4118777993495162876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 415
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d144baade090bba60800000000000000
+      internalID: 7690750748068103197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 415
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07aff516d5bb6fc90800000000000000
+      internalID: -7136310549781939600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9788437d92232e80800000000000000
+      internalID: -8204676036499568740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 0
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2627e8dbdfbf0d0800000000000000
+      internalID: -3387835304085658938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 0
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dcf50953cd165890800000000000000
+      internalID: -7469750207097996078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Smoke Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 0
+        width: 398
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db2e823da46a46b0800000000000000
+      internalID: -5311322115489780778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
