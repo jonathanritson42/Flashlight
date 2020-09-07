@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class enemymovement : MonoBehaviour
 {
     public bool patrol, patrolloop, navmesh;
-    public float speed, yheight;
+    public float speed;
     public GameObject body;
     public GameObject[] Goto_points;
     private NavMeshAgent agent;
@@ -62,7 +62,5 @@ public class enemymovement : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, Goto_points[pointno].transform.position, speed);
             }
         }
-
-        //transform.position = new Vector3(transform.position.x, yheight, transform.position.z);
     }
 }
