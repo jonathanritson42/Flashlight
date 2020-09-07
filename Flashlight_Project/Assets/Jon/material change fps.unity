@@ -1034,6 +1034,7 @@ GameObject:
   - component: {fileID: 1932144983}
   - component: {fileID: 1932144982}
   - component: {fileID: 1932144981}
+  - component: {fileID: 1932144985}
   m_Layer: 0
   m_Name: interactobject (1)
   m_TagString: Untagged
@@ -1115,25 +1116,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1932144985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932144980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dcbd8a62643914a8b61d3c21df3a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1975897122 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6843400999869261331, guid: f048a286752ee7a4f90967d330646964,
     type: 3}
   m_PrefabInstance: {fileID: 6843400999917103923}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1975897123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975897122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf5572a4406095042b6a5d829a28875e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textpopup: {fileID: 1162711311}
 --- !u!1 &2072266298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,10 +1514,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1162711311, guid: f048a286752ee7a4f90967d330646964, type: 3}
-      propertyPath: m_Text
-      value: '''E'' to Interact'
+    - target: {fileID: 697707703909371018, guid: f048a286752ee7a4f90967d330646964,
+        type: 3}
+      propertyPath: Audiopool.Array.size
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 697707703909371018, guid: f048a286752ee7a4f90967d330646964,
+        type: 3}
+      propertyPath: Audiopool.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b2a063890641f3548b1862527380e72e, type: 3}
+    - target: {fileID: 697707703909371018, guid: f048a286752ee7a4f90967d330646964,
+        type: 3}
+      propertyPath: Audiopool.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: f9ae196834ebf854ca0126e24d34247d, type: 3}
     - target: {fileID: 6843400999869261331, guid: f048a286752ee7a4f90967d330646964,
         type: 3}
       propertyPath: m_Name
