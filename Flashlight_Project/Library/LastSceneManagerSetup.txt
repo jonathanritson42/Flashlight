@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SJ_House_1.unity
+- path: Assets/Scenes/David Lighting House.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
