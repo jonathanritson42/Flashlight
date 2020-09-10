@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/David Lighting House.unity
+- path: Assets/All combined/Alpha Menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
