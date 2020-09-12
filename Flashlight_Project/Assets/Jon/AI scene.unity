@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1283,21 +1283,6 @@ PrefabInstance:
       propertyPath: Goto_points.Array.data[3]
       value: 
       objectReference: {fileID: 799095723}
-    - target: {fileID: 2762086665093588368, guid: 3ea9d536e9f0ce244937013b1b2a2c71,
-        type: 3}
-      propertyPath: stepCooldown
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762086665790767157, guid: 3ea9d536e9f0ce244937013b1b2a2c71,
-        type: 3}
-      propertyPath: stepDuration
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762086665790767157, guid: 3ea9d536e9f0ce244937013b1b2a2c71,
-        type: 3}
-      propertyPath: stepCooldown
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2762086665860259141, guid: 3ea9d536e9f0ce244937013b1b2a2c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1357,21 +1342,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spider
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762086666772196885, guid: 3ea9d536e9f0ce244937013b1b2a2c71,
-        type: 3}
-      propertyPath: stepDuration
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762086666772196885, guid: 3ea9d536e9f0ce244937013b1b2a2c71,
-        type: 3}
-      propertyPath: stepCooldown
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2762086666813930228, guid: 3ea9d536e9f0ce244937013b1b2a2c71,
-        type: 3}
-      propertyPath: stepCooldown
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ea9d536e9f0ce244937013b1b2a2c71, type: 3}

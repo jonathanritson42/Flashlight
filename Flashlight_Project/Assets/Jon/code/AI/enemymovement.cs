@@ -6,18 +6,16 @@ using UnityEngine.AI;
 
 public class enemymovement : MonoBehaviour
 {
-    public bool patrol, patrolloop, navmesh;
-    public float speed;
-    public GameObject body;
+    public bool patrol, patrolloop, navmesh, speedonplayerdist;
+    public float notnavspeed;
+    public GameObject body, player;
     public GameObject[] Goto_points;
     private NavMeshAgent agent;
-    private GameObject player;
     private int pointno;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponentInChildren<NavMeshAgent>();
     }
 
@@ -28,12 +26,21 @@ public class enemymovement : MonoBehaviour
         {
             if (navmesh)
             {
+                float dist = Vector3.Distance(body.transform.position, player.transform.position);
+
+                if (speedonplayerdist) agent.speed = dist; agent.acceleration = dist;
+
                 agent.SetDestination(player.transform.position);
+
+                transform.LookAt(player.transform.position, Vector3.up);    // world position is needed
+
+                body.transform.position = this.transform.position;      // just in case
             }
             else
             {
-                transform.position = Vector3.Lerp(transform.position, player.transform.position, speed);
-                transform.LookAt(player.transform);
+                transform.position = Vector3.Lerp(transform.position, player.transform.position, notnavspeed);
+                transform.LookAt(player.transform.position, Vector3.up);    // world position is needed
+
             }
         }
         else
@@ -52,6 +59,10 @@ public class enemymovement : MonoBehaviour
 
             if (navmesh)
             {
+                float playerdist = Vector3.Distance(body.transform.position, player.transform.position);
+
+                if (speedonplayerdist) agent.speed = playerdist;
+
                 agent.SetDestination(Goto_points[pointno].transform.position);
             }
             else 
@@ -59,7 +70,7 @@ public class enemymovement : MonoBehaviour
                 var lookPos = Goto_points[pointno].transform.position - transform.position;
                 lookPos.x = 0;
                 transform.rotation = Quaternion.LookRotation(lookPos);
-                transform.position = Vector3.Lerp(transform.position, Goto_points[pointno].transform.position, speed);
+                transform.position = Vector3.Lerp(transform.position, Goto_points[pointno].transform.position, notnavspeed);
             }
         }
     }

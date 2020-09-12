@@ -78,9 +78,9 @@ public class CreatureController : MonoBehaviour {
         //inputVelocity = Vector3.MoveTowards(inputVelocity, localInput, Time.deltaTime * moveInputFactor);
         //worldVelocity = inputVelocity * mSpeed;
         //rSpeed = Mathf.MoveTowards(rSpeed, Input.GetAxis("Turn") * rotationSpeed, rotateInputFactor * Time.deltaTime);
-        transform.Rotate(0f, rSpeed * Time.deltaTime, 0f);
+        //transform.Rotate(0f, rSpeed * Time.deltaTime, 0f);
 
-        transform.position += (worldVelocity * Time.deltaTime);
+        //transform.position += (worldVelocity * Time.deltaTime);
     }
 
     private void CalculateOrientation() {
