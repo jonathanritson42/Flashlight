@@ -12,8 +12,8 @@ public class LampActivate : MonoBehaviour
 
     public Light lt;
 
-    public bool aKeyPushed = false;
-    public bool dKeyPushed = true;
+    public bool leftKeyPushed = false;
+    public bool rightKeyPushed = true;
 
 
     private void Start()
@@ -23,17 +23,17 @@ public class LampActivate : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A) && dKeyPushed == true)
+        if (Input.GetKeyDown(KeyCode.Z) && rightKeyPushed == true)
         {
             mashAmount += mashCount;
-            aKeyPushed = true;
-            dKeyPushed = false;
+            leftKeyPushed = true;
+            rightKeyPushed = false;
         }
-        if (Input.GetKeyDown(KeyCode.D) && aKeyPushed == true)
+        if (Input.GetKeyDown(KeyCode.X) && leftKeyPushed == true)
         {
             mashAmount += mashCount;
-            aKeyPushed = false;
-            dKeyPushed = true;
+            leftKeyPushed = false;
+            rightKeyPushed = true;
             if (mashAmount >= 100)
             {
                 StartCoroutine("PowerUp");
