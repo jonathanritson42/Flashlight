@@ -15,6 +15,8 @@ public class interactscript: MonoBehaviour
         {
             textpopup.gameObject.SetActive(true);
 
+            textpopup.GetComponent<Text>().color = new Color(255,255,255, Mathf.PingPong(Time.time, 1));
+
             if (Input.GetKeyDown(KeyCode.E) && (hit.transform.GetComponent<objectanimation>()))
             {
                 textpopup.gameObject.SetActive(false);

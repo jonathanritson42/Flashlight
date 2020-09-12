@@ -3,7 +3,7 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-namespace DitzelGames.FastIK
+namespace DitzelGames.FastIK    // Allowed to use as it's both freely available on youtube and github. Plus the creator put it on the asset store for free.
 {
     /// <summary>
     /// Fabrik IK Solver
