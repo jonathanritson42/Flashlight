@@ -19,34 +19,37 @@ public class mainmenuscript : MonoBehaviour//, IPointerEnterHandler
         settingsObj.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void playgame()
     {
-        quit.animator.SetTrigger("Disabled");
-        settings.animator.SetTrigger("Disabled");
+        settings.interactable = false;
+        quit.interactable = false;
 
-        SceneManager.LoadScene(1);
+        StartCoroutine(delay(0));
     }
 
     void settingmenu()
     {
-        play.animator.SetTrigger("Disabled");
-        settings.animator.SetTrigger("Disabled");
-        quit.animator.SetTrigger("Disabled");
+        play.interactable = false;
+        settings.interactable = false;
+        quit.interactable = false;
 
-        settingsObj.SetActive(true);
+        StartCoroutine(delay(1));
     }
 
     void quitprogram()
     {
-        play.animator.SetTrigger("Disabled");
-        settings.animator.SetTrigger("Disabled");
+        play.interactable = false;
+        settings.interactable = false;
 
-        Application.Quit();
+        StartCoroutine(delay(2));
+    }
+
+    IEnumerator delay(int trigger)
+    {
+        yield return new WaitForSeconds(2);
+
+        if(trigger == 0) SceneManager.LoadScene(1);
+        if (trigger == 1) settingsObj.SetActive(true);
+        if (trigger == 2) Application.Quit();
     }
 }

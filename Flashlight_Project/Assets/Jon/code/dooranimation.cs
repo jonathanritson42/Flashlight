@@ -59,7 +59,6 @@ public class dooranimation : MonoBehaviour
 
     public void animate()
     {
-        print("animate");
 
         if (open) anim.SetTrigger("normal");
         if (spin) anim.SetTrigger("spin");
