@@ -15,10 +15,14 @@ public class LampActivate : MonoBehaviour
     public bool jKeyPushed = false;
     public bool kKeyPushed = true;
 
+    public GameObject enemyGO;
+    LampStealing lampSteal;
+
 
     private void Start()
     {
         lightSource.gameObject.SetActive(false);
+        lampSteal = enemyGO.GetComponent<LampStealing>();
     }
 
     public void Update()
@@ -38,6 +42,10 @@ public class LampActivate : MonoBehaviour
             {
                 StartCoroutine("PowerUp");
             }
+        }
+        if(lampSteal.lampStolen == true)
+        {
+            StartCoroutine("CoolDown");
         }
     }
 
@@ -62,7 +70,7 @@ public class LampActivate : MonoBehaviour
             lt.intensity = Mathf.MoveTowards(lt.intensity, 0.0f, Time.deltaTime);
             yield return null;
         }
-        lightSource.gameObject.SetActive(false);
+        //lightSource.gameObject.SetActive(false);
         mashAmount = 0; 
     }
 
