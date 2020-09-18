@@ -7,7 +7,7 @@ public class LampStealing : MonoBehaviour
 
     public Transform[] lampLocations;
 
-    private GameObject lamp;
+    public GameObject lamp;
 
     //use this to start lamp cooldown in other script
     public bool lampStolen;
@@ -18,19 +18,10 @@ public class LampStealing : MonoBehaviour
         {
             Debug.Log("Hit player");
             lampStolen = true;
-            lamp = GameObject.Find("Lamp");
             lamp.transform.parent = null;
             lamp.transform.position = lampLocations[Random.Range(0,lampLocations.Length)].transform.position;
             Debug.Log(lamp.transform.position);
-        }
-    }
-
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            //if()
-            lampStolen = false; 
+            Debug.Log(lampStolen);
         }
     }
 }
