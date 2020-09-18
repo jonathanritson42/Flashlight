@@ -18,6 +18,9 @@ public class LampActivate : MonoBehaviour
     public GameObject enemyGO;
     LampStealing lampSteal;
 
+    private GameObject player;
+    public GameObject lampPosition;
+
 
     private void Start()
     {
@@ -40,12 +43,17 @@ public class LampActivate : MonoBehaviour
             rightKeyPushed = true;
             if (mashAmount >= 100)
             {
+                mashAmount = 100;
                 StartCoroutine("PowerUp");
             }
         }
         if(lampSteal.lampStolen == true)
         {
             StartCoroutine("CoolDown");
+        }
+        if(lampSteal.lampStolen == false)
+        {
+            LampPickedUp();
         }
     }
 
@@ -72,6 +80,21 @@ public class LampActivate : MonoBehaviour
         }
         //lightSource.gameObject.SetActive(false);
         mashAmount = 0; 
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Lamp"))
+        {
+            lampSteal.lampStolen = false;
+        }
+    }
+
+    public void LampPickedUp()
+    {
+        player = GameObject.Find("Player");
+        lampSteal.lamp.transform.parent = player.transform.parent;
+        lampSteal.lamp.transform.position = lampPosition.transform.position;
     }
 
 }
