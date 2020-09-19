@@ -116,10 +116,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (m_Jump)
                 {
-                    m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
-                    m_Jump = false;
-                    m_Jumping = true;
+                    //m_MoveDir.y = m_JumpSpeed;
+                    //PlayJumpSound();
+                    //m_Jump = false;
+                    //m_Jumping = true;
                 }
             }
             else
@@ -157,7 +157,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_NextStep = m_StepCycle + m_StepInterval;
 
-            PlayFootStepAudio();
+            //PlayFootStepAudio();
         }
 
 
