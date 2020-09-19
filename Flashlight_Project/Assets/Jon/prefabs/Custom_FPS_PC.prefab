@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1211,6 +1211,7 @@ GameObject:
   - component: {fileID: 1975897123}
   - component: {fileID: 2686344972007612851}
   - component: {fileID: 828943643}
+  - component: {fileID: 9211753732234571911}
   m_Layer: 0
   m_Name: Custom_FPS_PC
   m_TagString: Player
@@ -1535,6 +1536,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 8442348373580600392}
   objects: {fileID: 0}
+--- !u!114 &9211753732234571911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843400999869261331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2876e67b0c629e49a87d86dbf8e877c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 1
+  mashAmount: 0
+  lightSource: {fileID: 0}
+  lightSound: {fileID: 0}
+  lt: {fileID: 0}
+  leftKeyPushed: 0
+  rightKeyPushed: 1
+  lamp: {fileID: 0}
+  player: {fileID: 6843400999869261331}
+  lampPosition: {fileID: 6843400999554420152}
+  lampLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &6864929605390806747
 GameObject:
   m_ObjectHideFlags: 0

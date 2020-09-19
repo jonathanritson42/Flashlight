@@ -32,11 +32,11 @@ public class Lamp : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Lamp"))
+        if (other.gameObject.CompareTag("Lamp") && state != LampState.PICKEDUP)
         {
             PickedUp();
         }
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && state != LampState.STOLEN)
         {
             Stolen();
         }
@@ -92,14 +92,20 @@ public class Lamp : MonoBehaviour
 
     void PickedUp()
     {
-        lamp.transform.parent = player.transform.parent;
+        //lamp.transform.parent = player.transform.parent;
         lamp.transform.position = lampPosition.transform.position;
+
+        lamp.GetComponent<flashlight>().enabled = true;
+
         state = LampState.PICKEDUP;
     }
 
     void Stolen()
     {
-        lamp.transform.parent = null;
+        //lamp.transform.parent = null;   // not nessessarry JR
+
+        lamp.GetComponent<flashlight>().enabled = false;
+
         lamp.transform.position = lampLocations[Random.Range(0, lampLocations.Length)].transform.position;
         state = LampState.STOLEN;
     }
