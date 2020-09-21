@@ -27,7 +27,8 @@ public class Lamp : MonoBehaviour
     private void Start()
     {
         state = LampState.NOTORCH;
-        lamp.transform.parent = null;
+        //lamp.transform.parent = null;
+
     }
 
     public void OnTriggerEnter(Collider other)
