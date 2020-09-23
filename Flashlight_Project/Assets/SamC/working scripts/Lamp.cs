@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum LampState { NOTORCH, PICKEDUP, STOLEN}
+public enum LampState { NOTORCH, PICKEDUP, COOLDOWN, STOLEN}
 
 public class Lamp : MonoBehaviour
 {
     public LampState state;
 
-    //lamp vars
+    [Header("Variables")]
     private int mashCount = 10;
     public int mashAmount = 0;
     public GameObject lightSource;
@@ -24,11 +24,15 @@ public class Lamp : MonoBehaviour
 
     public Transform[] lampLocations;
     public Collider lightcoll;
+
+    public float timer = 0.0f;
+
     private void Start()
     {
-        state = LampState.NOTORCH;
-        //lamp.transform.parent = null;
-
+        //state = LampState.NOTORCH;
+        state = LampState.PICKEDUP;
+        lamp.transform.parent = null;
+        lt.intensity = 0;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -47,32 +51,50 @@ public class Lamp : MonoBehaviour
     {
         if(state == LampState.PICKEDUP)
         {
+            lt.intensity = Mathf.Clamp(lt.intensity, 0, 30);
+            mashAmount = Mathf.Clamp(mashAmount, 0, 100);
+
+            timer += Time.deltaTime;
+
             if (Input.GetKeyDown(KeyCode.Z) && rightKeyPushed == true)
             {
                 mashAmount += mashCount;
+                lt.intensity += 3;
                 leftKeyPushed = true;
                 rightKeyPushed = false;
-            }
-            if (Input.GetKeyDown(KeyCode.X) && leftKeyPushed == true)
-            {
-                mashAmount += mashCount;
-                leftKeyPushed = false;
-                rightKeyPushed = true;
+                timer = 0;
                 if (mashAmount >= 100)
                 {
                     mashAmount = 100;
                     StartCoroutine("PowerUp");
                 }
             }
+            if (Input.GetKeyDown(KeyCode.X) && leftKeyPushed == true)
+            {
+                mashAmount += mashCount;
+                lt.intensity += 3;
+                leftKeyPushed = false;
+                rightKeyPushed = true;
+                timer = 0;
+                if (mashAmount >= 100)
+                {
+                    mashAmount = 100;
+                    StartCoroutine("PowerUp");
+                }
+            }
+            if(timer >= 5)
+            {
+                lt.intensity -= 3 * Time.deltaTime;
+            }
         }
     }
 
     IEnumerator PowerUp()
     {
-        lightSource.gameObject.SetActive(true);
-        while (lt.intensity != 1.5f)
+        //lightSource.gameObject.SetActive(true);
+        while (lt.intensity != 30f)
         {
-            lt.intensity = Mathf.MoveTowards(lt.intensity, 1.5f, Time.deltaTime);
+           // lt.intensity = Mathf.MoveTowards(lt.intensity, 30f, Time.deltaTime * 3);
             yield return null;
         }
         yield return new WaitForSeconds(0.5f);
@@ -82,12 +104,14 @@ public class Lamp : MonoBehaviour
     IEnumerator CoolDown()
     {
         yield return new WaitForSeconds(10.0f);
+        state = LampState.COOLDOWN;
         while (lt.intensity != 0.0)
         {
-            lt.intensity = Mathf.MoveTowards(lt.intensity, 0.0f, Time.deltaTime);
+            lt.intensity = Mathf.MoveTowards(lt.intensity, 0.0f, Time.deltaTime * 3);
             yield return null;
         }
         //lightSource.gameObject.SetActive(false);
+        state = LampState.PICKEDUP;
         mashAmount = 0;
     }
 
