@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SJ_House_1.unity
+- path: Assets/All combined/Alpha Scene Tidy.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
