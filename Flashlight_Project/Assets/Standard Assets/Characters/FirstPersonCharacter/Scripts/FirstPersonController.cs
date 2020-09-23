@@ -42,6 +42,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        public static bool isTeleporting;
 
         // Use this for initialization
         private void Start()
@@ -237,7 +238,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            
+                m_MouseLook.LookRotation(transform, m_Camera.transform);
+
+            
         }
 
 

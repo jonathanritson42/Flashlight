@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
+
+
 
 public class PortalTeleportsam : MonoBehaviour
 {
@@ -22,11 +25,12 @@ public class PortalTeleportsam : MonoBehaviour
              {
                  float rotationDifference = -Quaternion.Angle(transform.rotation, receiver.rotation);
                  rotationDifference += 180;
-                 player.transform.Rotate(Vector3.up, rotationDifference);
+                
 
                  Vector3 positionOffset = Quaternion.Euler(0f, rotationDifference, 0f) * portalToPlayer;
                  player.enabled = false;
-                 player.transform.position = receiver.position + positionOffset;
+                player.transform.Rotate(Vector3.up, rotationDifference);
+                player.transform.position = receiver.position + positionOffset;
                  player.enabled = true;
                  playerIsOverlapping = false;
              }
@@ -38,6 +42,7 @@ public class PortalTeleportsam : MonoBehaviour
          if(other.tag == "Player")
          {
              playerIsOverlapping = true;
+           FirstPersonController.isTeleporting = true;
          }
      }
 
@@ -46,7 +51,10 @@ public class PortalTeleportsam : MonoBehaviour
          if(other.tag == "Player")
          {
              playerIsOverlapping = false;
-         }
-     }
+            other.transform.rotation = Quaternion.Euler(0,0,0);
+            FirstPersonController.isTeleporting = false;
+
+        }
+    }
 
 }
