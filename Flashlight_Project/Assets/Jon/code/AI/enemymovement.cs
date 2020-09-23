@@ -32,14 +32,15 @@ public class enemymovement : MonoBehaviour
 
                 agent.SetDestination(player.transform.position);
 
-                transform.LookAt(player.transform.position, Vector3.up);    // world position is needed
-
                 body.transform.position = this.transform.position;      // just in case
+                body.transform.rotation = this.transform.rotation;
             }
             else
             {
                 transform.position = Vector3.Lerp(transform.position, player.transform.position, notnavspeed);
-                transform.LookAt(player.transform.position, Vector3.up);    // world position is needed
+
+                body.transform.position = this.transform.position;      // just in case
+                body.transform.rotation = this.transform.rotation;
 
             }
         }

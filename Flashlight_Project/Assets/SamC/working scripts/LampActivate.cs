@@ -15,10 +15,17 @@ public class LampActivate : MonoBehaviour
     public bool jKeyPushed = false;
     public bool kKeyPushed = true;
 
+    public GameObject enemyGO;
+    LampStealing lampSteal;
+
+    private GameObject player;
+    public GameObject lampPosition;
+
 
     private void Start()
     {
         lightSource.gameObject.SetActive(false);
+        lampSteal = enemyGO.GetComponent<LampStealing>();
     }
 
     public void Update()
@@ -36,8 +43,17 @@ public class LampActivate : MonoBehaviour
             kKeyPushed = true;
             if (mashAmount >= 100)
             {
+                mashAmount = 100;
                 StartCoroutine("PowerUp");
             }
+        }
+        if(lampSteal.lampStolen == true)
+        {
+            StartCoroutine("CoolDown");
+        }
+        if(lampSteal.lampStolen == false)
+        {
+            LampPickedUp();
         }
     }
 
@@ -62,8 +78,23 @@ public class LampActivate : MonoBehaviour
             lt.intensity = Mathf.MoveTowards(lt.intensity, 0.0f, Time.deltaTime);
             yield return null;
         }
-        lightSource.gameObject.SetActive(false);
+        //lightSource.gameObject.SetActive(false);
         mashAmount = 0; 
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Lamp"))
+        {
+            lampSteal.lampStolen = false;
+        }
+    }
+
+    public void LampPickedUp()
+    {
+        player = GameObject.Find("Player");
+        lampSteal.lamp.transform.parent = player.transform.parent;
+        lampSteal.lamp.transform.position = lampPosition.transform.position;
     }
 
 }

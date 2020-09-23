@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 2
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 14
@@ -1211,6 +1211,7 @@ GameObject:
   - component: {fileID: 1975897123}
   - component: {fileID: 2686344972007612851}
   - component: {fileID: 828943643}
+  - component: {fileID: 9211753732234571911}
   m_Layer: 0
   m_Name: Custom_FPS_PC
   m_TagString: Player
@@ -1269,15 +1270,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 5
-  m_RunSpeed: 10
+  m_WalkSpeed: 2
+  m_RunSpeed: 4
   m_RunstepLenghten: 0.7
-  m_JumpSpeed: 10
+  m_JumpSpeed: 0
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
   m_MouseLook:
-    XSensitivity: 2
-    YSensitivity: 2
+    XSensitivity: 0.5
+    YSensitivity: 0.5
     clampVerticalRotation: 1
     MinimumX: -90
     MaximumX: 90
@@ -1315,10 +1316,10 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_UseHeadBob: 1
+  m_UseHeadBob: 0
   m_HeadBob:
-    HorizontalBobRange: 0.1
-    VerticalBobRange: 0.1
+    HorizontalBobRange: 0.2
+    VerticalBobRange: 0.2
     Bobcurve:
       serializedVersion: 2
       m_Curve:
@@ -1372,9 +1373,9 @@ MonoBehaviour:
       m_RotationOrder: 4
     VerticaltoHorizontalRatio: 2
   m_JumpBob:
-    BobDuration: 0.2
+    BobDuration: 0.1
     BobAmount: 0.1
-  m_StepInterval: 5
+  m_StepInterval: 0
   m_FootstepSounds:
   - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
@@ -1407,11 +1408,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -1535,6 +1536,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 8442348373580600392}
   objects: {fileID: 0}
+--- !u!114 &9211753732234571911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843400999869261331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2876e67b0c629e49a87d86dbf8e877c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 1
+  mashAmount: 0
+  lightSource: {fileID: 0}
+  lightSound: {fileID: 0}
+  lt: {fileID: 0}
+  leftKeyPushed: 0
+  rightKeyPushed: 1
+  lamp: {fileID: 0}
+  player: {fileID: 6843400999869261331}
+  lampPosition: {fileID: 6843400999554420152}
+  lampLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &6864929605390806747
 GameObject:
   m_ObjectHideFlags: 0

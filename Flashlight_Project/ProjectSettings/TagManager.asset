@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Objects
   - ReverbTrigger
+  - Lamp
+  - Objects
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - 
   - 
   - Ground
-  - PostProcessing
+  - Player
   - 
   - 
   - 
