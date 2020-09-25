@@ -5,8 +5,13 @@ using UnityEngine;
 public class objectanimation : MonoBehaviour
 {
     [Header("Animations")]
-    public bool chair; public bool sofa; public bool sink; public bool bed;
+    public bool chair; 
+    public bool sofa;
+    public bool sink;
+    public bool bed;
+    public bool diningchair;
 
+    [Header("Trigger")]
     public bool triggered;
     private Animator anim;
 
@@ -30,6 +35,7 @@ public class objectanimation : MonoBehaviour
         if (sofa) anim.SetTrigger("sofa");
         if (sink) anim.SetTrigger("sink");
         if (bed) anim.SetTrigger("bed");
+        if (diningchair) anim.SetTrigger("diningchair");
 
         this.enabled = false;
     }

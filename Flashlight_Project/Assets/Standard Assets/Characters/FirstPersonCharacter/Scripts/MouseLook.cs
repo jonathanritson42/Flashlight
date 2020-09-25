@@ -33,7 +33,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (!FirstPersonController.isTeleporting)
             {
-                Debug.Log("Moving Normally");
+                //Debug.Log("Moving Normally");
                 float yRot = CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity;
                 float xRot = CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity;
 

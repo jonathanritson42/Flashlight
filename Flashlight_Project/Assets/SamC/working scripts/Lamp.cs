@@ -26,6 +26,7 @@ public class Lamp : MonoBehaviour
     public Collider lightcoll;
 
     public float timer = 0.0f;
+    public float delay;
 
     private void Start()
     {
@@ -103,7 +104,7 @@ public class Lamp : MonoBehaviour
 
     IEnumerator CoolDown()
     {
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(delay);
         state = LampState.COOLDOWN;
         while (lt.intensity != 0.0)
         {
