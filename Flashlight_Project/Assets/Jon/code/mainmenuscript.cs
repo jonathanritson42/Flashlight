@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class mainmenuscript : MonoBehaviour//, IPointerEnterHandler
 {
@@ -11,6 +12,7 @@ public class mainmenuscript : MonoBehaviour//, IPointerEnterHandler
     public GameObject point1, point2;
     private float dist1, dist2;
     private bool cutscene, moveon;
+    public float secondmovespeed;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +55,7 @@ public class mainmenuscript : MonoBehaviour//, IPointerEnterHandler
 
         if (trigger == 0)
         {
-            yield return new WaitForSeconds(8);
+            yield return new WaitForSeconds(secondmovespeed * 3);
             StartCoroutine(LoadYourAsyncScene());
         }
 
@@ -82,7 +84,7 @@ public class mainmenuscript : MonoBehaviour//, IPointerEnterHandler
 
             if (moveon)
             {
-                Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, point2.transform.position, Time.deltaTime / 2);
+                Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, point2.transform.position, Time.deltaTime / secondmovespeed);
                 Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, point2.transform.rotation, Time.deltaTime);
 
             }

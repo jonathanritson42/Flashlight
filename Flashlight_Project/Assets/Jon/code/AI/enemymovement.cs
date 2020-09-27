@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class enemymovement : MonoBehaviour
 {
-    public bool patrol, patrolloop, navmesh, speedonplayerdist;
+    public bool patrol, navmesh, speedonplayerdist;
     public float notnavspeed;
     public GameObject body, player;
     public GameObject[] Goto_points;
@@ -30,7 +30,7 @@ public class enemymovement : MonoBehaviour
 
                 if (speedonplayerdist) agent.speed = dist; agent.acceleration = dist;
 
-                agent.SetDestination(player.transform.position);
+                if(dist > 1) agent.SetDestination(player.transform.position);
 
                 body.transform.position = this.transform.position;      // just in case
                 body.transform.rotation = this.transform.rotation;
@@ -46,32 +46,45 @@ public class enemymovement : MonoBehaviour
         }
         else
         {
-            float dist = Vector3.Distance(body.transform.position, Goto_points[pointno].transform.position);
-
-            if (dist <= 5)       // Distance to point before moving on.
+            if (pointno == Goto_points.Length)
             {
-                pointno++;
+                Destroy(this.gameObject);
+                Destroy(this);
+
             }
-
-            if(pointno > (Goto_points.Length - 1))
+            else
             {
-                pointno = 0;
-            }
+                float dist = Vector3.Distance(body.transform.position, Goto_points[pointno].transform.position);
 
-            if (navmesh)
-            {
-                float playerdist = Vector3.Distance(body.transform.position, player.transform.position);
+                if (dist <= 1)       // Distance to point before moving on.
+                {
+                    if (pointno < Goto_points.Length)
+                    {
+                        pointno++;
+                    }
 
-                if (speedonplayerdist) agent.speed = playerdist;
+                }
 
-                agent.SetDestination(Goto_points[pointno].transform.position);
-            }
-            else 
-            {
-                var lookPos = Goto_points[pointno].transform.position - transform.position;
-                lookPos.x = 0;
-                transform.rotation = Quaternion.LookRotation(lookPos);
-                transform.position = Vector3.Lerp(transform.position, Goto_points[pointno].transform.position, notnavspeed);
+                //if(pointno > (Goto_points.Length - 1))
+                //{
+                //    pointno = 0;
+                //}
+
+                if (navmesh)
+                {
+                    float playerdist = Vector3.Distance(body.transform.position, player.transform.position);
+
+                    if (speedonplayerdist) agent.speed = playerdist;
+
+                    agent.SetDestination(Goto_points[pointno].transform.position);
+                }
+                else
+                {
+                    var lookPos = Goto_points[pointno].transform.position - transform.position;
+                    lookPos.x = 0;
+                    transform.rotation = Quaternion.LookRotation(lookPos);
+                    transform.position = Vector3.Lerp(transform.position, Goto_points[pointno].transform.position, notnavspeed);
+                }
             }
         }
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 322903591}
   - component: {fileID: 322903590}
   - component: {fileID: 171547893064778773}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Subtitles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,8 +184,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 549866518}
-  - component: {fileID: 697707703909371018}
-  m_Layer: 0
+  - component: {fileID: 645505180}
+  m_Layer: 9
   m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,19 +206,102 @@ Transform:
   m_Father: {fileID: 6843400999869430323}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &697707703909371018
-MonoBehaviour:
+--- !u!82 &645505180
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549866516}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff21b3c7eb2fbbd42b7b91e8ab36810a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Audiopool: []
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &918733578
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +313,7 @@ GameObject:
   - component: {fileID: 918733579}
   - component: {fileID: 918733581}
   - component: {fileID: 918733580}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,13 +388,13 @@ GameObject:
   - component: {fileID: 1061974410}
   - component: {fileID: 1061974409}
   - component: {fileID: 1061974412}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1061974411
 RectTransform:
   m_ObjectHideFlags: 0
@@ -423,7 +506,7 @@ GameObject:
   - component: {fileID: 1162711312}
   - component: {fileID: 1162711311}
   - component: {fileID: 1162711313}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Interact text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +599,7 @@ GameObject:
   - component: {fileID: 1664129201}
   - component: {fileID: 1664129203}
   - component: {fileID: 1664129202}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +674,7 @@ GameObject:
   - component: {fileID: 1849165469}
   - component: {fileID: 1849165468}
   - component: {fileID: 1849165467}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +775,7 @@ GameObject:
   - component: {fileID: 1306250718649321059}
   - component: {fileID: 5161149632421949122}
   - component: {fileID: 9111441312625771562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2403007927048649125}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ReverbZones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +899,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2013516905868597669}
   - component: {fileID: 2045924598971088015}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Default Reverb
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -871,7 +954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7791205116001566362}
   - component: {fileID: 4416340637894251413}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hallway Reverb
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -928,7 +1011,7 @@ GameObject:
   - component: {fileID: 6843400999554420156}
   - component: {fileID: 6843400999554420157}
   - component: {fileID: 6843400999554420158}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: torchpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1023,7 +1106,7 @@ GameObject:
   - component: {fileID: 6843400999864727125}
   - component: {fileID: 6843400999550161111}
   - component: {fileID: 6843400999550161109}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1212,7 +1295,7 @@ GameObject:
   - component: {fileID: 2686344972007612851}
   - component: {fileID: 828943643}
   - component: {fileID: 9211753732234571911}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Custom_FPS_PC
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1543,7 +1626,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6843400999869261331}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2876e67b0c629e49a87d86dbf8e877c, type: 3}
   m_Name: 
@@ -1565,6 +1648,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  lightcoll: {fileID: 0}
+  timer: 10000
+  delay: 1
 --- !u!1 &6864929605390806747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,7 +1661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4739924189476945379}
   - component: {fileID: 2213057463744544370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Kitchen Reverb
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -1629,7 +1715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4825381291712758463}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}

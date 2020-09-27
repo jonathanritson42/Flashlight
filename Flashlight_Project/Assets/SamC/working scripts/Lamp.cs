@@ -11,7 +11,7 @@ public class Lamp : MonoBehaviour
     [Header("Variables")]
     private int mashCount = 10;
     public int mashAmount = 0;
-    public GameObject lightSource;
+    public Collider lightSource;
     public AudioSource lightSound;
     public Light lt;
     public bool leftKeyPushed = false;
@@ -34,6 +34,7 @@ public class Lamp : MonoBehaviour
         state = LampState.PICKEDUP;
         lamp.transform.parent = null;
         lt.intensity = 0;
+        lightSource.enabled = false;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -104,6 +105,8 @@ public class Lamp : MonoBehaviour
 
     IEnumerator CoolDown()
     {
+        lightSource.enabled = true;
+
         yield return new WaitForSeconds(delay);
         state = LampState.COOLDOWN;
         while (lt.intensity != 0.0)
@@ -114,6 +117,9 @@ public class Lamp : MonoBehaviour
         //lightSource.gameObject.SetActive(false);
         state = LampState.PICKEDUP;
         mashAmount = 0;
+
+        lightSource.enabled = false;
+
     }
 
     void PickedUp()

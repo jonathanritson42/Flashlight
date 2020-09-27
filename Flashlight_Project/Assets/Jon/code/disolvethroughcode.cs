@@ -14,8 +14,6 @@ public class disolvethroughcode : MonoBehaviour
     void Start()
     {
         myMaterials = GetComponent<Renderer>().materials;
-
-
     }
 
     // Update is called once per frame
@@ -23,7 +21,7 @@ public class disolvethroughcode : MonoBehaviour
     {
         if (change)
         {
-            timer += 0.002f;
+            timer += 0.005f;
 
             if (downtimer > 0)
             {
@@ -32,6 +30,11 @@ public class disolvethroughcode : MonoBehaviour
 
             myMaterials[0].color = Color.Lerp(startcolour, endcolour, timer);
             myMaterials[1].SetFloat("_Cutoff", downtimer);
+        }
+        else if(timer > 0)
+        {
+            timer -= 0.005f;
+            myMaterials[0].color = Color.Lerp(endcolour, startcolour, timer);
         }
     }
 
@@ -42,6 +45,7 @@ public class disolvethroughcode : MonoBehaviour
             if (effect)
             {
                 change = true;
+                StartCoroutine(backup());
             }
             else
             {
@@ -66,6 +70,20 @@ public class disolvethroughcode : MonoBehaviour
             {
                 myMaterials[0].color = startcolour;
             }
+        }
+    }
+
+    IEnumerator backup()
+    {
+        yield return new WaitForSeconds(12);
+
+        if (effect)
+        {
+            change = false;
+        }
+        else
+        {
+            myMaterials[0].color = startcolour;
         }
     }
 }

@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class New_texttrigger : MonoBehaviour
 {
+    public AudioSource audioSource;
     public GameObject subtitlego;
-
-    private AudioSource pcaudio;
     public AudioClip[] audiolines;
     public string[] Subtitles;
     private int subpos;
@@ -32,7 +31,6 @@ public class New_texttrigger : MonoBehaviour
 
     private void Start()
     {
-        pcaudio = subtitlego.GetComponent<AudioSource>();
         PC_subtitles = subtitlego.GetComponent<Text>();
         subpos = 0;
         curaudioline = 0;
@@ -43,11 +41,11 @@ public class New_texttrigger : MonoBehaviour
 
     private void Update()
     {
-        if (!pcaudio.isPlaying && curaudioline < audiolines.Length && once == true)
+        if (!audioSource.isPlaying && curaudioline < audiolines.Length && once == true)
         {
             curaudioline++;
-            pcaudio.clip = audiolines[curaudioline];
-            pcaudio.Play();
+            audioSource.clip = audiolines[curaudioline];
+            audioSource.Play();
         }
     }
 
@@ -62,7 +60,7 @@ public class New_texttrigger : MonoBehaviour
         if (other.gameObject.name == "PC" || other.gameObject.tag == "Player")
         {
             StopCoroutine(Textdisplay());
-            pcaudio.Stop();
+            audioSource.Stop();
 
             for (int i = 0; i < prevtext.Length; i++)
             {
@@ -84,9 +82,7 @@ public class New_texttrigger : MonoBehaviour
             subpos = 0;
             curaudioline = 0;
 
-            pcaudio.clip = audiolines[curaudioline];
-
-            pcaudio.Play();
+            audioSource.clip = audiolines[curaudioline];
 
             StartCoroutine(Textdisplay());
         }
@@ -95,6 +91,8 @@ public class New_texttrigger : MonoBehaviour
     IEnumerator Textdisplay()
     {
         yield return new WaitForSeconds(Start_delay);
+
+        audioSource.Play();
 
         once = true;
 
@@ -115,6 +113,7 @@ public class New_texttrigger : MonoBehaviour
 
     IEnumerator End()
     {
+
         yield return new WaitForSeconds(change_delay);
 
         yield return new WaitForSeconds(1);  // change this dependednt on usecase

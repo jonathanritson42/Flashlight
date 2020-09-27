@@ -187,6 +187,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &203018674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869490395938724371, guid: fb379632dfb4abf4e8a92751090077ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 6022505465287103722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &375531147 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6843400999554420152, guid: f048a286752ee7a4f90967d330646964,
@@ -292,6 +298,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 310f4c32e1cfa924d98da2e1d10f1cdb, type: 3}
+--- !u!108 &703677510 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6022505464021052334, guid: fb379632dfb4abf4e8a92751090077ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 6022505465287103722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &732136484
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +378,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.54e-43, y: -2.3305882e+24, z: 6.53e-43, w: 0}
+  m_BoundingSphereOverride: {x: 7.31e-43, y: 2.9892e-41, z: 0, w: -1}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1164,6 +1176,9 @@ MonoBehaviour:
   sofa: 0
   sink: 0
   bed: 0
+  diningchair: 0
+  bookshelf: 0
+  tv: 0
   triggered: 0
 --- !u!65 &2072266300
 BoxCollider:
@@ -1417,22 +1432,22 @@ PrefabInstance:
     - target: {fileID: 6022505464021052334, guid: fb379632dfb4abf4e8a92751090077ee,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: 7.31e-43
       objectReference: {fileID: 0}
     - target: {fileID: 6022505464021052334, guid: fb379632dfb4abf4e8a92751090077ee,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 1.9444e-41
+      value: -187.55603
       objectReference: {fileID: 0}
     - target: {fileID: 6022505464021052334, guid: fb379632dfb4abf4e8a92751090077ee,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0
+      value: 7.31e-43
       objectReference: {fileID: 0}
     - target: {fileID: 6022505464021052334, guid: fb379632dfb4abf4e8a92751090077ee,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 8.570388e-33
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6061429152053117097, guid: fb379632dfb4abf4e8a92751090077ee,
         type: 3}
@@ -1586,6 +1601,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9211753732234571911, guid: f048a286752ee7a4f90967d330646964,
+        type: 3}
+      propertyPath: lamp
+      value: 
+      objectReference: {fileID: 203018674}
+    - target: {fileID: 9211753732234571911, guid: f048a286752ee7a4f90967d330646964,
+        type: 3}
+      propertyPath: lightSource
+      value: 
+      objectReference: {fileID: 203018674}
+    - target: {fileID: 9211753732234571911, guid: f048a286752ee7a4f90967d330646964,
+        type: 3}
+      propertyPath: lt
+      value: 
+      objectReference: {fileID: 703677510}
     m_RemovedComponents:
     - {fileID: 322903589, guid: f048a286752ee7a4f90967d330646964, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f048a286752ee7a4f90967d330646964, type: 3}
