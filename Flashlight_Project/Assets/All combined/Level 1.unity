@@ -9897,10 +9897,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 645505180, guid: f048a286752ee7a4f90967d330646964, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -6155394289930238897, guid: e2432fe963d1fa447bd1ab0a8e7388bd,
+        type: 2}
+    - target: {fileID: 645505180, guid: f048a286752ee7a4f90967d330646964, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 828943643, guid: f048a286752ee7a4f90967d330646964, type: 3}
       propertyPath: objects
       value: 
       objectReference: {fileID: 906284402}
+    - target: {fileID: 1849165466, guid: f048a286752ee7a4f90967d330646964, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6843400999869261331, guid: f048a286752ee7a4f90967d330646964,
         type: 3}
       propertyPath: m_Name
@@ -33229,9 +33242,9 @@ BoxCollider:
   m_GameObject: {fileID: 821715329}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 0, z: 3}
+  m_Size: {x: 2, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!43 &823102393
 Mesh:
