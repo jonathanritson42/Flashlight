@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class dooranimation : MonoBehaviour
@@ -77,5 +78,13 @@ public class dooranimation : MonoBehaviour
         }
 
         if(!openclose) this.enabled = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<NavMeshAgent>())
+        {
+            animate();
+        }
     }
 }
