@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Combined Scenes/Main Menu.unity
+- path: Assets/All combined/Main Menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
