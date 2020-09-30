@@ -12,11 +12,16 @@ public class enemymovement : MonoBehaviour
     public GameObject[] Goto_points;
     private NavMeshAgent agent;
     private int pointno;
+    public static bool spiderrun;
+    public GameObject torch;
+    private float navmeshspeed;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponentInChildren<NavMeshAgent>();
+        navmeshspeed = agent.speed;
+
     }
 
     // Update is called once per frame
@@ -26,14 +31,32 @@ public class enemymovement : MonoBehaviour
         {
             if (navmesh)
             {
-                float dist = Vector3.Distance(body.transform.position, player.transform.position);
+                if (spiderrun)
+                {
+                    float dist = Vector3.Distance(body.transform.position, torch.transform.position);
 
-                if (speedonplayerdist) agent.speed = dist; agent.acceleration = dist;
+                    if (dist > 0.1f)
+                    {
+                        agent.speed = navmeshspeed * 2;
+                        agent.SetDestination(torch.transform.position);
+                    }
+                    else
+                    {
+                        agent.speed = navmeshspeed;
+                        spiderrun = false;
+                    }
+                }
+                else 
+                {
+                    float dist = Vector3.Distance(body.transform.position, player.transform.position);
 
-                if(dist > 1) agent.SetDestination(player.transform.position);
+                    if (speedonplayerdist) agent.speed = dist; agent.acceleration = dist;
 
-                body.transform.position = this.transform.position;      // just in case
-                body.transform.rotation = this.transform.rotation;
+                    if (dist > 2f) agent.SetDestination(player.transform.position);
+
+                    body.transform.position = this.transform.position;      // just in case
+                    body.transform.rotation = this.transform.rotation;
+                }
             }
             else
             {
