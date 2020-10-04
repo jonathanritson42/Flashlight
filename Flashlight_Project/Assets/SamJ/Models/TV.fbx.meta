@@ -3,7 +3,22 @@ guid: 36c09fb9d70d8824299e206711a66f7a
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TVBack
+    second: {fileID: 2100000, guid: 80ff7748a0f23124db041376f7cc87aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TVGlass
+    second: {fileID: 2100000, guid: a7ad328c9f34c6546ad29c9092ed49f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tv
+    second: {fileID: 2100000, guid: 232608606b36b5c468135a6d9fe84073, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
