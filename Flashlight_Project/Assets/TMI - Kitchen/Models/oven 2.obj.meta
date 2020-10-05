@@ -27,7 +27,12 @@ ModelImporter:
   - first:
       43: 4300000
     second: oven_2
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oven_2Mat
+    second: {fileID: 2100000, guid: a938c078719a2f64ea56ffe57c4ae1c6, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
