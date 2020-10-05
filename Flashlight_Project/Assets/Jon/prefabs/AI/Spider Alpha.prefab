@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 236618018221500206}
   m_Layer: 0
   m_Name: Spider Alpha
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,7 @@ NavMeshAgent:
   m_Acceleration: 6
   avoidancePriority: 99
   m_AngularSpeed: 1000
-  m_StoppingDistance: 0
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
@@ -177,13 +177,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrol: 0
-  patrolloop: 0
   navmesh: 1
   speedonplayerdist: 0
   notnavspeed: 0
   body: {fileID: 2674089130526678196}
   player: {fileID: 0}
   Goto_points: []
+  torch: {fileID: 0}
 --- !u!65 &236618018221500206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -192,10 +192,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236618018221500194}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 2.2}
+  m_Size: {x: 1.99, y: 2.41, z: 2.84}
   m_Center: {x: 0, y: 0, z: 0.4}
 --- !u!1001 &236618017486078460
 PrefabInstance:

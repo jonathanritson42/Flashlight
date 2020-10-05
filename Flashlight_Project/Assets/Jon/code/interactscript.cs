@@ -11,7 +11,7 @@ public class interactscript: MonoBehaviour
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 4) && (hit.transform.GetComponent<objectanimation>() || hit.transform.GetComponent<dooranimation>()))
+        if (Physics.Raycast(ray, out hit, 4) && (hit.transform.GetComponent<objectanimation>() || hit.transform.GetComponent<dooranimation>() || hit.transform.GetComponent<lamponoff>()))
         {
             textpopup.gameObject.SetActive(true);
 
@@ -34,6 +34,12 @@ public class interactscript: MonoBehaviour
             {
                 textpopup.gameObject.SetActive(false);
                 hit.transform.GetComponent<dooranimation>().animate();
+            }
+            
+            if (Input.GetKeyDown(KeyCode.E) && (hit.transform.GetComponent<lamponoff>()))
+            {
+                textpopup.gameObject.SetActive(false);
+                hit.transform.GetComponent<lamponoff>().triggered = true;
             }
         }
         else
