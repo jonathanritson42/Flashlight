@@ -6174,7 +6174,7 @@ PrefabInstance:
     - target: {fileID: 1426800415291640206, guid: a356a902d14c8ec45aadd459d412802b,
         type: 3}
       propertyPath: m_Name
-      value: unknownroom door (3)
+      value: side room door
       objectReference: {fileID: 0}
     - target: {fileID: 1426800416027084456, guid: a356a902d14c8ec45aadd459d412802b,
         type: 3}
@@ -9531,7 +9531,7 @@ PrefabInstance:
     - target: {fileID: 1426800415291640206, guid: a356a902d14c8ec45aadd459d412802b,
         type: 3}
       propertyPath: m_Name
-      value: unknownroom door (1)
+      value: study door
       objectReference: {fileID: 0}
     - target: {fileID: 1426800416027084456, guid: a356a902d14c8ec45aadd459d412802b,
         type: 3}
@@ -65228,7 +65228,7 @@ PrefabInstance:
     - target: {fileID: 1426800415291640206, guid: a356a902d14c8ec45aadd459d412802b,
         type: 3}
       propertyPath: m_Name
-      value: Unknownroom door
+      value: utility door
       objectReference: {fileID: 0}
     - target: {fileID: 1426800416027084456, guid: a356a902d14c8ec45aadd459d412802b,
         type: 3}
@@ -76488,7 +76488,7 @@ PrefabInstance:
     - target: {fileID: 1426800415291640206, guid: a356a902d14c8ec45aadd459d412802b,
         type: 3}
       propertyPath: m_Name
-      value: unknownroom door (2)
+      value: study door 2
       objectReference: {fileID: 0}
     - target: {fileID: 1426800416027084456, guid: a356a902d14c8ec45aadd459d412802b,
         type: 3}
@@ -94153,7 +94153,7 @@ PrefabInstance:
     - target: {fileID: 1426800415291640206, guid: a356a902d14c8ec45aadd459d412802b,
         type: 3}
       propertyPath: m_Name
-      value: unknownroom door (4)
+      value: bathroom door
       objectReference: {fileID: 0}
     - target: {fileID: 1426800416027084456, guid: a356a902d14c8ec45aadd459d412802b,
         type: 3}

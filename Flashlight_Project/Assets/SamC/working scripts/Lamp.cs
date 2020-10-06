@@ -141,6 +141,7 @@ public class Lamp : MonoBehaviour
         lamp.GetComponent<flashlight>().enabled = false;
 
         lightcoll.enabled = false;
+        enemymovement.spiderrun = true;
 
         lamp.transform.position = lampLocations[Random.Range(0, lampLocations.Length)].transform.position;
         lamp.transform.position = new Vector3(lamp.transform.position.x, lamp.transform.position.y - 0.5f, lamp.transform.position.z + 8f);
