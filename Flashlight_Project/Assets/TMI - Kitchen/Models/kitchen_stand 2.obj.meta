@@ -27,9 +27,14 @@ ModelImporter:
   - first:
       43: 4300000
     second: kitchen_stand_2
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kitchen_stand_2Mat
+    second: {fileID: 2100000, guid: 1e0913808afe52749abd34532adc4bd4, type: 2}
   materials:
-    materialImportMode: 0
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1

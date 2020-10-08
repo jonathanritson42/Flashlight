@@ -42,6 +42,7 @@ public class PortalTeleportsam : MonoBehaviour
          if(other.tag == "Player")
          {
              playerIsOverlapping = true;
+            StartCoroutine(Camera.main.GetComponentInChildren<fadeinout>().fadeandLoadAsyncScene());
            FirstPersonController.isTeleporting = true;
          }
      }

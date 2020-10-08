@@ -55,7 +55,7 @@ public class mainmenuscript : MonoBehaviour//, IPointerEnterHandler
 
         if (trigger == 0)
         {
-            yield return new WaitForSeconds(secondmovespeed * 3);
+            yield return new WaitForSeconds(secondmovespeed * 2);
             StartCoroutine(LoadYourAsyncScene());
         }
 
@@ -93,7 +93,13 @@ public class mainmenuscript : MonoBehaviour//, IPointerEnterHandler
 
     IEnumerator LoadYourAsyncScene()
     {
+
+        Camera.main.GetComponentInChildren<fadeinout>().fadeflip = true;
+
+        yield return new WaitForSeconds(3f);
+
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
+
 
         while (!asyncLoad.isDone)
         {
