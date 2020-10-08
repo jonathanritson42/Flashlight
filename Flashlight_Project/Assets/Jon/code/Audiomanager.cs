@@ -33,10 +33,6 @@ public class Audiomanager : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < Curlines.Count; i++)
-        {
-            print(Curlines[i]);
-        }
 
         if (CurAudiolines.Count > 0 && !playing)
         {
@@ -47,11 +43,6 @@ public class Audiomanager : MonoBehaviour
             curText = Curlines[0];
             StartCoroutine(Textdisplay());
         }
-        else if (CurAudiolines.Count > 0 && playing && !AS.isPlaying)
-        {
-            CurAudiolines.Remove(CurAudiolines[0]);
-            playing = false;
-        }
     }
 
     IEnumerator Textdisplay()
@@ -59,6 +50,8 @@ public class Audiomanager : MonoBehaviour
         yield return new WaitForSeconds(Start_delay);
 
         PC_subtitles.text = "";
+        textlength = curText.Length;
+        letter = 0;
 
         for (float i = 0; i < textlength; i++)
         {
@@ -69,25 +62,33 @@ public class Audiomanager : MonoBehaviour
 
         yield return new WaitForSeconds(change_delay);
 
-        next();
+        StartCoroutine(next());
         StopCoroutine(Textdisplay());
     }
 
-    void next()
+    IEnumerator next()
     {
+        while (AS.isPlaying)
+        {
+            yield return null;
+        }
+
         Curlines.Remove(Curlines[0]);
+        CurAudiolines.Remove(CurAudiolines[0]);
 
         if (Curlines.Count == 0)
         {
             PC_subtitles.text = "";
+            playing = false;
         }
 
         else
         {
             curText = Curlines[0];
             textlength = curText.Length;
-            letter = 0;
 
+            AS.clip = CurAudiolines[0];
+            AS.Play();
             StartCoroutine(Textdisplay());
         }
     }
