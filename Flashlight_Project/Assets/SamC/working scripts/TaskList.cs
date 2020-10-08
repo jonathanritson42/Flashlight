@@ -8,7 +8,7 @@ public class TaskList : MonoBehaviour
     public GameObject nextLevelPortal;
 
     public int taskCounter = 0;
-    public static int tasksToComplete = 1;
+    public int tasksToComplete;
 
     public Text taskScore;
 
@@ -17,7 +17,6 @@ public class TaskList : MonoBehaviour
     {
         nextLevelPortal.gameObject.SetActive(false);
         taskCounter = 0;
-        tasksToComplete += 1;
     }
 
     void Update()
