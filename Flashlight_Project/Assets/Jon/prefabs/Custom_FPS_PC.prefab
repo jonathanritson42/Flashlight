@@ -221,64 +221,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subtitlego: {fileID: 322903587}
   Audiopool:
-  - {fileID: 8300000, guid: 0270cacb1301be945b11fbe74bf752f6, type: 3}
-  - {fileID: 8300000, guid: a25c2799d851cb9439e62cbd2a6d4427, type: 3}
-  - {fileID: 8300000, guid: 16d8f7c3d8f5f4f42a45359edc12d418, type: 3}
-  - {fileID: 8300000, guid: 0b72af0dd3bd4054f9d622c7cb5d12e8, type: 3}
-  - {fileID: 8300000, guid: d5ae36e5362741a4884f40767115999c, type: 3}
-  - {fileID: 8300000, guid: f7f5c7a46391def48b36d97489835f16, type: 3}
-  - {fileID: 8300000, guid: db2f9da47d0e5e34dac48ce5ecd3c267, type: 3}
-  - {fileID: 8300000, guid: 0270cacb1301be945b11fbe74bf752f6, type: 3}
-  - {fileID: 8300000, guid: 0270cacb1301be945b11fbe74bf752f6, type: 3}
-  - {fileID: 8300000, guid: 0270cacb1301be945b11fbe74bf752f6, type: 3}
-  - {fileID: 8300000, guid: 7c9a2fe4aadb5ab41bd07a84533c3612, type: 3}
-  - {fileID: 8300000, guid: 89733904d7155ad40b9947e776e1d836, type: 3}
-  - {fileID: 8300000, guid: 8c8aa60dc2915034da82ba79f7fdaafb, type: 3}
-  - {fileID: 8300000, guid: a2b37ff7ad84fc449a5b3949834efc38, type: 3}
-  - {fileID: 8300000, guid: fdcdeee33a50f2148a18880228b2cf0f, type: 3}
-  - {fileID: 8300000, guid: d940b9807b3cfc54aa5f5b609eb79c58, type: 3}
-  - {fileID: 8300000, guid: 206ab28e949329548bee000f25eeac0c, type: 3}
-  - {fileID: 8300000, guid: 4c6362f6bcd017f489e27c478aeae31d, type: 3}
-  - {fileID: 8300000, guid: cd55b1bb2b80f7841bbe44a1c86d9680, type: 3}
-  - {fileID: 8300000, guid: a8f8633c0b2ddfc4588962a154866a58, type: 3}
-  - {fileID: 8300000, guid: 5087a64d824b0a447a47a0df653bd408, type: 3}
-  - {fileID: 8300000, guid: 4b374d110a9df5043b21377fa426b193, type: 3}
-  - {fileID: 8300000, guid: 209cc881d7a2d4a448fea103559274bb, type: 3}
-  - {fileID: 8300000, guid: d65f4bb7f10a4c2468c02f30cb3092d0, type: 3}
-  - {fileID: 8300000, guid: bb4855f58144afa4e93039da33a6e935, type: 3}
-  - {fileID: 8300000, guid: c61d55d7aa47c944d86078f09f858499, type: 3}
-  - {fileID: 8300000, guid: 452340896e648d349b18196281ba78f2, type: 3}
-  - {fileID: 8300000, guid: 670ed607c144c04439ae7a3b39b9ef28, type: 3}
-  - {fileID: 8300000, guid: 74661f652b812734198d8e9c48c4a4c0, type: 3}
+  - {fileID: 8300000, guid: ecd8d5195e6493f4dbd9e204189ca744, type: 3}
+  - {fileID: 8300000, guid: fd2f8be6ab38fc046a6aa96dd0961f57, type: 3}
+  - {fileID: 8300000, guid: 55cc7162e31413e4a812cd9472a04678, type: 3}
+  - {fileID: 8300000, guid: 99e5542446f02a34197ec8459fe919c4, type: 3}
+  - {fileID: 8300000, guid: c7c3d68ab0497454b97f2ffcea6e80e2, type: 3}
+  - {fileID: 8300000, guid: 4998d5cf80c90a94aac7a0817e187d89, type: 3}
+  - {fileID: 8300000, guid: a31f2d40bce7299468192ea9c29a77f2, type: 3}
+  - {fileID: 8300000, guid: 8785ba679429d30469b77c5d302a412c, type: 3}
+  - {fileID: 8300000, guid: bfc46fe19af0b184a8da086c0d45d9ed, type: 3}
+  - {fileID: 8300000, guid: d61f65d8008ee3044a0488d5220e9994, type: 3}
+  - {fileID: 8300000, guid: 83046fcc7d277c44c94c0d82764cbded, type: 3}
+  - {fileID: 8300000, guid: 98ca61f08286cf74db8fc1d7ce14cd37, type: 3}
+  - {fileID: 8300000, guid: 5262867c3d68b66448208df043d66453, type: 3}
+  - {fileID: 8300000, guid: fbda063f9f7cf7a40a069cc6bc832089, type: 3}
+  - {fileID: 8300000, guid: ebaf8d6a3ee4c90498996f2e3d6f8cff, type: 3}
+  - {fileID: 8300000, guid: f5357c71f55bfe04f9bb232d55a426f7, type: 3}
+  - {fileID: 8300000, guid: b3a25c04ca896cf41861ae34b7b68505, type: 3}
+  - {fileID: 8300000, guid: 2a824f59c21137244953aa1b05ece21e, type: 3}
+  - {fileID: 8300000, guid: 57915605fe7a3e94eaefa375ff7bc042, type: 3}
+  - {fileID: 8300000, guid: bcc394247acce034588f7c1119266a43, type: 3}
+  - {fileID: 8300000, guid: dba3608ec986b1748b076a5ffe10118e, type: 3}
+  - {fileID: 8300000, guid: 2e09285a0de926a40b65155339a25aa2, type: 3}
+  - {fileID: 8300000, guid: b33ab2ef5f35feb4581705c8fe297836, type: 3}
+  - {fileID: 8300000, guid: 00ddb8194611ca241af9221b8f6981a0, type: 3}
+  - {fileID: 8300000, guid: fe52d3525e4a41146b54c9155c692eb6, type: 3}
   Scriptpool:
   - "Bloody rain. Lord\u2019s got it out for me today."
-  - 'Right, those are definitely locked. One hundred percent. '
-  - "I\u2019m looking at them, and they\u2019re locked. Okay\u2026 Okay."
-  - Not really much time for anything right now.
-  - I should really get ready for bed.
-  - "Did\u2026 I leave a light on?"
-  - "Lord, I\u2019ve been out all day, that\u2019s not like me."
-  - "Bloody rain. Lord\u2019s got it out for me today."
-  - "Bloody rain. Lord\u2019s got it out for me today."
-  - "Bloody rain. Lord\u2019s got it out for me today."
-  - Right, those are definitely locked. One-
-  - "I forgot one\u2026 need to lock that."
+  - "Right, those are definitely locked. One hundred percent.  I\u2019m looking at
+    them, and they\u2019re locked. Okay\u2026 Okay. "
+  - 'Not really much time for anything right now. I should really get ready for bed. '
+  - "Did\u2026 I leave a light on? Lord, I\u2019ve been out all day, that\u2019s
+    not like me. "
+  - "This one\u2019s been in the family a while. Art\u2019s never really been my
+    thing, but still. Best get that light off. "
+  - "That\u2026 what? How is the painting giving off light? Maybe I should look closer. "
+  - "Right, those are definitely locked. One- . I forgot one\u2026 need to lock that. "
   - Must have missed this one on the way out, silly me.
-  - "Something\u2019s not right."
-  - I need to check everything again.
-  - Rushed out after breakfast this morning.
-  - Got to learn to slow down a bit.
+  - 'Rushed out after breakfast this morning. Got to learn to slow down a bit. '
   - "I\u2026 must have knocked it."
-  - "It\u2019s been a busy day."
-  - I should probably give my hands a wash.
-  - "I- I /just/ locked these\u2026"
-  - Again, Joe. Lock them again.
-  - "\u2026what the fuck?"
-  - My hands. I need to wash my hands.
-  - I- what the fuck? I just fucking locked these!
-  - "Stay with it, Joe. Let\u2019s just get to bed."
-  - 'Right, those are definitely locked. One hundred percent. '
-  - "I\u2019m looking at them, and they\u2019re locked. Okay\u2026 Okay."
+  - "It\u2019s been a busy day. I should probably give my hands a wash. "
+  - "I- I /just/ locked these\u2026 Again, Joe. Lock them again."
+  - "\u2026what the hell was that?"
+  - "This has got to be my mind playing tricks on me. I-I\u2019ve been working too
+    hard lately, that\u2019s all. "
+  - "\u2026There\u2019s no way this is happening."
+  - "You\u2019re not real!"
+  - "\u2026Keep it together, Joe."
+  - "Right, those are definitely locked. One hundred percent.  I\u2019m looking at
+    them, and they\u2019re locked. Okay\u2026 Okay. "
+  - "Hey\u2026 Joe?"
+  - "Hey mate, I- you were a little jumpy at work, I just thought I\u2019d come and
+    make sure you\u2019re alright. "
   - "Hey mate. Yeah, I\u2019m\u2026 I\u2019m alright."
   text_speed: 0.1
   change_delay: 0.3

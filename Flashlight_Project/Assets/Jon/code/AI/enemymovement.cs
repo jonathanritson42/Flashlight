@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class enemymovement : MonoBehaviour
 {
@@ -109,6 +110,15 @@ public class enemymovement : MonoBehaviour
                     transform.position = Vector3.Lerp(transform.position, Goto_points[pointno].transform.position, notnavspeed);
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Lamp>().state == LampState.STOLEN)
+        {
+            other.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+            StartCoroutine(Camera.main.GetComponentInChildren<fadeinout>().fadeandLoadAsyncDeath());
         }
     }
 }

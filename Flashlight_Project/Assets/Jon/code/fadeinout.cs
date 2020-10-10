@@ -103,4 +103,28 @@ public class fadeinout : MonoBehaviour
         }
     }
 
+    public IEnumerator fadeandLoadAsyncDeath()
+    {
+        alpha = 0;
+
+        while (white.color.a != 1)
+        {
+            white.color = new Color(255, 255, 255, alpha);
+
+            alpha += 0.02f;
+
+            yield return new WaitForSeconds(0.00001f);
+
+        }
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+
+        while (!asyncLoad.isDone)
+        {
+            asyncLoad.allowSceneActivation = true;
+
+            yield return null;
+        }
+    }
+
 }
