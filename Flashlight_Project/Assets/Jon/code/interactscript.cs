@@ -28,7 +28,7 @@ public class interactscript: MonoBehaviour
             {
                 textpopup.gameObject.SetActive(false);
                 hit.transform.GetComponent<objectanimation>().triggered = true;
-                hit.transform.GetComponent<TaskList>().taskCounter += 1;
+                TaskList.taskCounter += 1;
             }
 
             if (Input.GetKeyDown(KeyCode.E) && (hit.transform.GetComponent<dooranimation>()))
@@ -41,7 +41,7 @@ public class interactscript: MonoBehaviour
             {
                 textpopup.gameObject.SetActive(false);
                 hit.transform.GetComponent<lamponoff>().triggered = true;
-                hit.transform.GetComponent<TaskList>().taskCounter += 1;
+                TaskList.taskCounter += 1;
             }
         }
         else

@@ -10,7 +10,7 @@ public class fadeinout : MonoBehaviour
     private Image white;
     private float alpha;
 
-    public bool fadeflip;
+    public bool fadeflip, MM;
     private bool once;
     // Start is called before the first frame update
     void Start()
@@ -37,9 +37,13 @@ public class fadeinout : MonoBehaviour
 
     IEnumerator fadeinstart()
     {
+        if(!MM) GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+
         yield return new WaitForSeconds(startfadeindelay);
 
-        while (white.color.a != 0)
+        if (!MM) GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+
+        while (white.color.a > 0)
         {
             white.color = new Color(255, 255, 255, alpha);
 
@@ -54,7 +58,7 @@ public class fadeinout : MonoBehaviour
     {
         alpha = 0;
 
-        while (white.color.a != 1)
+        while (white.color.a < 1)
         {
             white.color = new Color(255, 255, 255, alpha);
 
@@ -68,7 +72,7 @@ public class fadeinout : MonoBehaviour
     {
         alpha = 1;
 
-        while (white.color.a != 0)
+        while (white.color.a > 0)
         {
             white.color = new Color(255, 255, 255, alpha);
 
@@ -83,7 +87,7 @@ public class fadeinout : MonoBehaviour
     {
         alpha = 0;
 
-        while (white.color.a != 1)
+        while (white.color.a < 1)
         {
             white.color = new Color(255, 255, 255, alpha);
 
@@ -93,21 +97,16 @@ public class fadeinout : MonoBehaviour
 
         }
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
-        while (!asyncLoad.isDone)
-        {
-            asyncLoad.allowSceneActivation = true;
-
-            yield return null;
-        }
+        print("next");
     }
 
     public IEnumerator fadeandLoadAsyncDeath()
     {
         alpha = 0;
 
-        while (white.color.a != 1)
+        while (white.color.a < 1)
         {
             white.color = new Color(255, 255, 255, alpha);
 
@@ -117,14 +116,8 @@ public class fadeinout : MonoBehaviour
 
         }
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-
-        while (!asyncLoad.isDone)
-        {
-            asyncLoad.allowSceneActivation = true;
-
-            yield return null;
-        }
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
     }
 
 }

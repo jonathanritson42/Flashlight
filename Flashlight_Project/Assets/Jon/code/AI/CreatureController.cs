@@ -118,7 +118,7 @@ public class CreatureController : MonoBehaviour {
             transform.Translate(0, -(-avgSurfaceDist + desiredSufaceDist) * 0.5f, 0, Space.Self);
         } else {
             // Simple Gravity
-            transform.Translate(0, -20 * Time.deltaTime, 0, Space.World);
+            //transform.Translate(0, -20 * Time.deltaTime, 0, Space.World);
         }
     }
 

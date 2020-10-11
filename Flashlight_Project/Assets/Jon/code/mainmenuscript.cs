@@ -7,8 +7,7 @@ using UnityEditor;
 
 public class mainmenuscript : MonoBehaviour//, IPointerEnterHandler
 {
-    public Button play, quit, settings;
-    public GameObject settingsObj;
+    public Button play, quit;
     public GameObject point1, point2;
     private float dist1, dist2;
     private bool cutscene, moveon;
@@ -19,32 +18,19 @@ public class mainmenuscript : MonoBehaviour//, IPointerEnterHandler
     {
         play.onClick.AddListener(playgame);
         quit.onClick.AddListener(quitprogram);
-        settings.onClick.AddListener(settingmenu);
 
-        settingsObj.SetActive(false);
     }
 
     void playgame()
     {
-        settings.interactable = false;
         quit.interactable = false;
         cutscene = true;
         StartCoroutine(delay(0));
     }
 
-    void settingmenu()
-    {
-        play.interactable = false;
-        settings.interactable = false;
-        quit.interactable = false;
-
-        StartCoroutine(delay(1));
-    }
-
     void quitprogram()
     {
         play.interactable = false;
-        settings.interactable = false;
 
         StartCoroutine(delay(2));
     }
@@ -59,7 +45,6 @@ public class mainmenuscript : MonoBehaviour//, IPointerEnterHandler
             StartCoroutine(LoadYourAsyncScene());
         }
 
-        if (trigger == 1) settingsObj.SetActive(true);
         if (trigger == 2) Application.Quit();
     }
 

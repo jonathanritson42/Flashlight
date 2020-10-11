@@ -8,13 +8,18 @@ public class lamponoff : MonoBehaviour
     public GameObject lampshade;
     public Material replacemat;
 
-    public bool triggered;
+    public bool triggered, portal;
 
     private void Update()
     {
-        if (triggered)
+        if (triggered && !portal)
         {
             Trigger();
+        }
+
+        if (triggered && portal)
+        {
+            GetComponent<Collider>().isTrigger = true;
         }
     }
 

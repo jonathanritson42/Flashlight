@@ -39,8 +39,8 @@ public class oldtexttrigger : MonoBehaviour
 
     private void Update()
     {
-        print(curaudioline);
-        print(once);
+        //print(curaudioline);
+        //print(once);
 
         if (!audioSource.isPlaying && curaudioline - 1 < audiolines.Length && once == true)
         {

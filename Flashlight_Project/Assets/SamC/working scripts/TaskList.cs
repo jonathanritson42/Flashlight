@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class TaskList : MonoBehaviour
 {
-    public GameObject nextLevelPortal;
+    public GameObject nextLevelPortal, deleteobject;
 
-    public int taskCounter = 0;
+    public static int taskCounter = 0;
     public int tasksToComplete;
 
     public Text taskScore;
@@ -24,6 +24,7 @@ public class TaskList : MonoBehaviour
         if (taskCounter == tasksToComplete)
         {
             nextLevelPortal.gameObject.SetActive(true);
+            if(deleteobject != null) deleteobject.gameObject.SetActive(false);
         }
         taskScore.text = taskCounter + "/" + tasksToComplete;
     }

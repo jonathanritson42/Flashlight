@@ -274,7 +274,10 @@ MonoBehaviour:
   - "Hey mate, I- you were a little jumpy at work, I just thought I\u2019d come and
     make sure you\u2019re alright. "
   - "Hey mate. Yeah, I\u2019m\u2026 I\u2019m alright."
-  text_speed: 0.1
+  - "Something\u2019s not right."
+  - I need to check everything again.
+  - "I think I can hear something in the attic\u2026"
+  text_speed: 0.06
   change_delay: 0.3
   Start_delay: 0
 --- !u!82 &645505180
@@ -1738,7 +1741,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevelPortal: {fileID: 0}
-  taskCounter: 0
   tasksToComplete: 0
   taskScore: {fileID: 857155906986108160}
 --- !u!1 &6864929605390806747
@@ -1993,3 +1995,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startfadeindelay: 0
   fadeflip: 0
+  MM: 0

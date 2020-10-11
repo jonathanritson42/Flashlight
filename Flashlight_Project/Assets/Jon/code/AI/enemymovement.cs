@@ -13,7 +13,7 @@ public class enemymovement : MonoBehaviour
     public GameObject[] Goto_points;
     private NavMeshAgent agent;
     private int pointno;
-    public static bool spiderrun;
+    public static bool spiderrun, spiderflash;
     public GameObject torch;
     private float navmeshspeed;
 
@@ -32,7 +32,7 @@ public class enemymovement : MonoBehaviour
         {
             if (navmesh)
             {
-                if (spiderrun)
+                if (spiderrun && !spiderflash)
                 {
                     float dist = Vector3.Distance(body.transform.position, torch.transform.position);
 
@@ -47,7 +47,7 @@ public class enemymovement : MonoBehaviour
                         spiderrun = false;
                     }
                 }
-                else 
+                else if(!spiderflash)
                 {
                     float dist = Vector3.Distance(body.transform.position, player.transform.position);
 
@@ -57,6 +57,16 @@ public class enemymovement : MonoBehaviour
 
                     body.transform.position = this.transform.position;      // just in case
                     body.transform.rotation = this.transform.rotation;
+                }
+
+                if (spiderflash)
+                {
+                    agent.speed = navmeshspeed * 2;
+                    agent.SetDestination(Goto_points[0].transform.position);
+                }
+                else
+                {
+                    agent.speed = navmeshspeed;
                 }
             }
             else
@@ -79,8 +89,9 @@ public class enemymovement : MonoBehaviour
             else
             {
                 float dist = Vector3.Distance(body.transform.position, Goto_points[pointno].transform.position);
+                print(dist);
 
-                if (dist <= 1)       // Distance to point before moving on.
+                if (dist <= 4)       // Distance to point before moving on.
                 {
                     if (pointno < Goto_points.Length)
                     {
@@ -119,6 +130,26 @@ public class enemymovement : MonoBehaviour
         {
             other.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
             StartCoroutine(Camera.main.GetComponentInChildren<fadeinout>().fadeandLoadAsyncDeath());
+        }
+
+        if (other.gameObject.GetComponent<flashlight>())
+        {
+            spiderflash = true;
+        }
+
+        if (other.gameObject.name == "spiderpoint")
+        {
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.GetComponent<flashlight>())
+        {
+            spiderflash = false;
         }
     }
 }
