@@ -43,7 +43,7 @@ public class PortalTeleportsam : MonoBehaviour
          {
              playerIsOverlapping = true;
             StartCoroutine(Camera.main.GetComponentInChildren<fadeinout>().fadeandLoadAsyncScene());
-           FirstPersonController.isTeleporting = true;
+          // FirstPersonController.isTeleporting = true;
          }
      }
 
@@ -53,7 +53,7 @@ public class PortalTeleportsam : MonoBehaviour
          {
              playerIsOverlapping = false;
             other.transform.rotation = Quaternion.Euler(0,0,0);
-            FirstPersonController.isTeleporting = false;
+            //FirstPersonController.isTeleporting = false;
 
         }
     }

@@ -1606,6 +1606,7 @@ GameObject:
   - component: {fileID: 828943643}
   - component: {fileID: 9211753732234571911}
   - component: {fileID: 2716505932724296540}
+  - component: {fileID: 7516674931317790625}
   m_Layer: 9
   m_Name: Custom_FPS_PC
   m_TagString: Player
@@ -1983,6 +1984,18 @@ MonoBehaviour:
   deleteobject: {fileID: 0}
   tasksToComplete: 0
   taskScore: {fileID: 857155906986108160}
+--- !u!114 &7516674931317790625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843400999869261331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66de4950b5b71094eab43dd1c2bdf771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6864929605390806747
 GameObject:
   m_ObjectHideFlags: 0
