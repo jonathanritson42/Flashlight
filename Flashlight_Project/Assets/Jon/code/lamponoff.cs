@@ -36,6 +36,8 @@ public class lamponoff : MonoBehaviour
 
         lampshade.GetComponent<MeshRenderer>().material = replacemat;
 
-        this.enabled = false;
+        Destroy(this);
+
+        //this.enabled = false;
     }
 }

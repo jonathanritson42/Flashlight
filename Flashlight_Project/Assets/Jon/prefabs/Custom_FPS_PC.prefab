@@ -240,8 +240,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5a1bf68fdbf792a48bac9aeec11fd1f9, type: 3}
   - {fileID: 8300000, guid: b3a25c04ca896cf41861ae34b7b68505, type: 3}
   - {fileID: 8300000, guid: db6c8476cabd9404e82296dc3045649a, type: 3}
-  - {fileID: 8300000, guid: 57915605fe7a3e94eaefa375ff7bc042, type: 3}
-  - {fileID: 8300000, guid: bcc394247acce034588f7c1119266a43, type: 3}
+  - {fileID: 8300000, guid: 0232787d0b80c034981439c7a56435d5, type: 3}
+  - {fileID: 8300000, guid: 631d1bbad366dca4f9aa4a9bbed2ee8e, type: 3}
   - {fileID: 8300000, guid: dba3608ec986b1748b076a5ffe10118e, type: 3}
   - {fileID: 8300000, guid: cfb90df130c35694b9b787d6ef521087, type: 3}
   - {fileID: 8300000, guid: 4c43dc93474d29946a373cf4d68983e2, type: 3}
@@ -249,6 +249,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: de937ea9afdd24e4abc75a51be0f104f, type: 3}
   - {fileID: 8300000, guid: c8f129f92b27a544cacb7b0392b3f925, type: 3}
   - {fileID: 8300000, guid: 855f552beccee664885aa955c628bf63, type: 3}
+  - {fileID: 8300000, guid: e9b92f92438634548be664ee007e9662, type: 3}
+  - {fileID: 8300000, guid: f4e6fbd424b5e824dab07bf2cb75ed9b, type: 3}
   Scriptpool:
   - "Bloody rain. Lord\u2019s got it out for me today."
   - "Right, those are definitely locked. One hundred percent.  I\u2019m looking at
@@ -274,7 +276,8 @@ MonoBehaviour:
   - "Right, those are definitely locked. One hundred percent.  I\u2019m looking at
     them, and they\u2019re locked. Okay\u2026 Okay. "
   - "Hey\u2026 Joe?"
-  - Hey mate, I- you were a little jumpy at work,
+  - "Hey mate, I- you were a little jumpy at work, I just thought I\u2019d come and
+    make sure you\u2019re alright. "
   - "Hey mate. Yeah, I\u2019m\u2026 I\u2019m alright."
   - "Something\u2019s not right."
   - I need to check everything again.
@@ -282,7 +285,10 @@ MonoBehaviour:
   - .......................
   - "I- what the fuck? I just fucking locked these! Stay with it, Joe. Let\u2019s
     just get to bed."
-  - " I just thought I\u2019d come and make sure you\u2019re alright. "
+  - ....
+  - woahh ... why does the painting look like the hallway? it's almost like a portal...
+  - huh what's this... A torch? ... This wasn't here before ... I wonder if i can
+    use it on anything.
   text_speed: 0.06
   change_delay: 0.3
   Start_delay: 0
@@ -1897,6 +1903,7 @@ MonoBehaviour:
   interactsfx: {fileID: 8300000, guid: c41e6acf366460a45a41318b4d56ab92, type: 3}
   doorsfx: {fileID: 8300000, guid: d222efac8b346484da8a005b61c54042, type: 3}
   AS: {fileID: 7490721473080797833}
+  lightbounds: {fileID: 0}
 --- !u!114 &2686344972007612851
 MonoBehaviour:
   m_ObjectHideFlags: 0

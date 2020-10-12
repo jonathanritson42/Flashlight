@@ -14,7 +14,7 @@ public class interactscript: MonoBehaviour
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 4) && (hit.transform.GetComponent<objectanimation>() || hit.transform.GetComponent<dooranimation>() || hit.transform.GetComponent<lamponoff>()))
+        if (Physics.Raycast(ray, out hit, 4) && ((hit.transform.GetComponent<objectanimation>() && lightbounds.enabled) || hit.transform.GetComponent<dooranimation>() || (hit.transform.GetComponent<lamponoff>()) && lightbounds.enabled))
         {
             textpopup.gameObject.SetActive(true);
 
@@ -24,7 +24,7 @@ public class interactscript: MonoBehaviour
             }
             else
             {
-                if (lightbounds.gameObject.activeInHierarchy)
+                if (lightbounds.enabled)
                 {
                     textpopup.GetComponent<Text>().color = new Color(0, 0, 0, Mathf.PingPong(Time.time, 1));
                 }
@@ -34,7 +34,7 @@ public class interactscript: MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.E) && (hit.transform.GetComponent<objectanimation>() && lightbounds.gameObject.activeInHierarchy))
+            if (Input.GetKeyDown(KeyCode.E) && (hit.transform.GetComponent<objectanimation>()))
             {
                 textpopup.gameObject.SetActive(false);
                 hit.transform.GetComponent<objectanimation>().triggered = true;
@@ -54,7 +54,7 @@ public class interactscript: MonoBehaviour
 
             }
             
-            if (Input.GetKeyDown(KeyCode.E) && (hit.transform.GetComponent<lamponoff>() && lightbounds.gameObject.activeInHierarchy))
+            if (Input.GetKeyDown(KeyCode.E) && (hit.transform.GetComponent<lamponoff>() && lightbounds.enabled))
             {
                 textpopup.gameObject.SetActive(false);
                 hit.transform.GetComponent<lamponoff>().triggered = true;

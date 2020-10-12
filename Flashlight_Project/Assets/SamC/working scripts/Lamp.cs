@@ -37,6 +37,8 @@ public class Lamp : MonoBehaviour
         lamp.transform.parent = null;
         lt.intensity = 0;
         lightSource.enabled = false;
+        UItext.SetActive(false);
+
     }
 
     public void OnTriggerEnter(Collider other)

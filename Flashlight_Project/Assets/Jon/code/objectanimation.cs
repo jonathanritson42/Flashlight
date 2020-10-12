@@ -42,7 +42,7 @@ public class objectanimation : MonoBehaviour
         if (bookshelf) anim.SetTrigger("bookshelf");
         if (tv) this.gameObject.SetActive(false);
         if (singlediningchair) anim.SetTrigger("singlediningchair");
-              
-        this.enabled = false;
+
+        Destroy(this);
     }
 }
