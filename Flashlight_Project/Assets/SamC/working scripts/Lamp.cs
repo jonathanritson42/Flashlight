@@ -28,6 +28,8 @@ public class Lamp : MonoBehaviour
     public float timer = 0.0f;
     public float delay;
 
+    public GameObject UItext;
+
     private void Start()
     {
         //state = LampState.NOTORCH;
@@ -53,6 +55,15 @@ public class Lamp : MonoBehaviour
     {
         if(state == LampState.PICKEDUP)
         {
+            if (lt.intensity == 0)
+            {
+                UItext.SetActive(true);
+            }
+            else 
+            {
+                UItext.SetActive(false);
+            }
+
             lt.intensity = Mathf.Clamp(lt.intensity, 0, 30);
             mashAmount = Mathf.Clamp(mashAmount, 0, 100);
 
@@ -111,7 +122,7 @@ public class Lamp : MonoBehaviour
         state = LampState.COOLDOWN;
         while (lt.intensity != 0.0)
         {
-            lt.intensity = Mathf.MoveTowards(lt.intensity, 0.0f, Time.deltaTime * 3);
+            lt.intensity = Mathf.MoveTowards(lt.intensity, 0.0f, Time.deltaTime * 1);
             yield return null;
         }
         //lightSource.gameObject.SetActive(false);

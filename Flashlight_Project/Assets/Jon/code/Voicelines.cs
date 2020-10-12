@@ -11,18 +11,22 @@ public class Voicelines : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        GetComponent<Collider>().enabled = false;
-
-        for (int i = 0; i < Audiopoollines.Length; i++)
+        if (other.gameObject.tag == "Player")
         {
-            Audiomanager.CurAudiolines.Add(AudioMan.GetComponent<Audiomanager>().Audiopool[Audiopoollines[i]]);
-        }
 
-        for (int i = 0; i < Scriptpoollines.Length; i++)
-        {
-            Audiomanager.Curlines.Add(AudioMan.GetComponent<Audiomanager>().Scriptpool[Scriptpoollines[i]]);
-        }
+            GetComponent<Collider>().enabled = false;
 
-        Destroy(this.gameObject);
+            for (int i = 0; i < Audiopoollines.Length; i++)
+            {
+                Audiomanager.CurAudiolines.Add(AudioMan.GetComponent<Audiomanager>().Audiopool[Audiopoollines[i]]);
+            }
+
+            for (int i = 0; i < Scriptpoollines.Length; i++)
+            {
+                Audiomanager.Curlines.Add(AudioMan.GetComponent<Audiomanager>().Scriptpool[Scriptpoollines[i]]);
+            }
+
+            Destroy(this.gameObject);
+        }
     }
 }

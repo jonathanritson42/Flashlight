@@ -12,6 +12,9 @@ public class fadeinout : MonoBehaviour
 
     public bool fadeflip, MM;
     private bool once;
+
+    public Text subtitles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +40,9 @@ public class fadeinout : MonoBehaviour
 
     IEnumerator fadeinstart()
     {
-        if(!MM) GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+        subtitles.color = Color.white;
+
+        if (!MM) GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
 
         yield return new WaitForSeconds(startfadeindelay);
 
@@ -56,6 +61,8 @@ public class fadeinout : MonoBehaviour
 
     IEnumerator fadein()
     {
+        subtitles.color = Color.black;
+
         alpha = 0;
 
         while (white.color.a < 1)
@@ -67,9 +74,15 @@ public class fadeinout : MonoBehaviour
             yield return new WaitForSeconds(0.00001f);
 
         }
+
+        if (!MM) GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
     }
+
     IEnumerator fadeout()
     {
+        subtitles.color = Color.white;
+
+
         alpha = 1;
 
         while (white.color.a > 0)
@@ -85,6 +98,8 @@ public class fadeinout : MonoBehaviour
 
     public IEnumerator fadeandLoadAsyncScene()
     {
+        subtitles.color = Color.black;
+
         alpha = 0;
 
         while (white.color.a < 1)
@@ -104,6 +119,8 @@ public class fadeinout : MonoBehaviour
 
     public IEnumerator fadeandLoadAsyncDeath()
     {
+        subtitles.color = Color.black;
+
         alpha = 0;
 
         while (white.color.a < 1)

@@ -3233,7 +3233,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8038989499862878828}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &110392799
 BoxCollider:
@@ -22873,12 +22873,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504772031}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.12410112, y: 0.21469924, z: 0.027514627, w: 0.96837294}
+  m_LocalPosition: {x: -12.14, y: 2.8, z: -42.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8038989499862878828}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &504772033
 AudioSource:
@@ -22901,7 +22901,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 30
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -32845,7 +32845,7 @@ MonoBehaviour:
   audioSource: {fileID: 110392802}
   subtitlego: {fileID: 331149308}
   audiolines:
-  - {fileID: 8300000, guid: ecd8d5195e6493f4dbd9e204189ca744, type: 3}
+  - {fileID: 8300000, guid: 178838093e91a6141a57a0fc3f02fce8, type: 3}
   Subtitles:
   - "Bloody rain. Lord\u2019s got it out for me today."
   text_speed: 0.06
@@ -116530,7 +116530,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1099256778}
-  - {fileID: 504772032}
   - {fileID: 110392798}
   m_Father: {fileID: 0}
   m_RootOrder: 13

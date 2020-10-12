@@ -89,7 +89,6 @@ public class enemymovement : MonoBehaviour
             else
             {
                 float dist = Vector3.Distance(body.transform.position, Goto_points[pointno].transform.position);
-                print(dist);
 
                 if (dist <= 4)       // Distance to point before moving on.
                 {
