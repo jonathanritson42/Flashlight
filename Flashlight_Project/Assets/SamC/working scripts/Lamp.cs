@@ -71,7 +71,7 @@ public class Lamp : MonoBehaviour
 
             timer += Time.deltaTime;
 
-            if (Input.GetKeyDown(KeyCode.Z) && rightKeyPushed == true)
+            if (Input.GetKeyDown(KeyCode.Q) && rightKeyPushed == true)
             {
                 mashAmount += mashCount;
                 lt.intensity += 3;
@@ -84,7 +84,7 @@ public class Lamp : MonoBehaviour
                     StartCoroutine("PowerUp");
                 }
             }
-            if (Input.GetKeyDown(KeyCode.X) && leftKeyPushed == true)
+            if (Input.GetKeyDown(KeyCode.E) && leftKeyPushed == true)
             {
                 mashAmount += mashCount;
                 lt.intensity += 3;

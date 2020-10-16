@@ -34,7 +34,7 @@ public class interactscript: MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.E) && (hit.transform.GetComponent<objectanimation>()))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && (hit.transform.GetComponent<objectanimation>()))
             {
                 textpopup.gameObject.SetActive(false);
                 hit.transform.GetComponent<objectanimation>().triggered = true;
@@ -45,7 +45,7 @@ public class interactscript: MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.E) && (hit.transform.GetComponent<dooranimation>()))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && (hit.transform.GetComponent<dooranimation>()))
             {
                 textpopup.gameObject.SetActive(false);
                 hit.transform.GetComponent<dooranimation>().animate();
@@ -54,7 +54,7 @@ public class interactscript: MonoBehaviour
 
             }
             
-            if (Input.GetKeyDown(KeyCode.E) && (hit.transform.GetComponent<lamponoff>() && lightbounds.enabled))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && (hit.transform.GetComponent<lamponoff>() && lightbounds.enabled))
             {
                 textpopup.gameObject.SetActive(false);
                 hit.transform.GetComponent<lamponoff>().triggered = true;
