@@ -34,7 +34,7 @@ public class Lamp : MonoBehaviour
     {
         //state = LampState.NOTORCH;
         state = LampState.PICKEDUP;
-        lamp.transform.parent = null;
+        //lamp.transform.parent = null;
         lt.intensity = 0;
         lightSource.enabled = false;
         UItext.SetActive(false);
@@ -124,7 +124,7 @@ public class Lamp : MonoBehaviour
         state = LampState.COOLDOWN;
         while (lt.intensity != 0.0)
         {
-            lt.intensity = Mathf.MoveTowards(lt.intensity, 0.0f, Time.deltaTime * 1);
+            if(!pausemenu.paused) lt.intensity = Mathf.MoveTowards(lt.intensity, 0.0f, Time.deltaTime * 1);
             yield return null;
         }
         //lightSource.gameObject.SetActive(false);
@@ -137,21 +137,21 @@ public class Lamp : MonoBehaviour
 
     void PickedUp()
     {
-        //lamp.transform.parent = player.transform.parent;
-        lamp.transform.position = lampPosition.transform.position;
+        lamp.transform.parent = this.transform.parent;
+        //lamp.transform.position = lampPosition.transform.position;
         lightcoll.enabled = true;
 
 
-        lamp.GetComponent<flashlight>().enabled = true;
+        //lamp.GetComponent<flashlight>().enabled = true;
 
         state = LampState.PICKEDUP;
     }
 
     void Stolen()
     {
-        //lamp.transform.parent = null;   // not nessessarry JR
+        lamp.transform.parent = null;
 
-        lamp.GetComponent<flashlight>().enabled = false;
+        //lamp.GetComponent<flashlight>().enabled = false;
 
         lightcoll.enabled = false;
         enemymovement.spiderrun = true;

@@ -33,6 +33,15 @@ public class Audiomanager : MonoBehaviour
 
     private void Update()
     {
+        if (pausemenu.paused)
+        {
+            AS.Pause();
+        }
+        else if (!pausemenu.paused)
+        {
+            AS.UnPause();
+        }
+
 
         if (CurAudiolines.Count > 0 && !playing)
         {
@@ -58,12 +67,23 @@ public class Audiomanager : MonoBehaviour
             PC_subtitles.text += curText[letter];
             letter++;
             yield return new WaitForSeconds(text_speed);
+
+            while (pausemenu.paused)
+            {
+                yield return null;
+            }
         }
 
         yield return new WaitForSeconds(change_delay);
 
+        while (pausemenu.paused)
+        {
+            yield return null;
+        }
+
         StartCoroutine(next());
         StopCoroutine(Textdisplay());
+        
     }
 
     IEnumerator next()

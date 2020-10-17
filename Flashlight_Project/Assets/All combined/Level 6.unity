@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.04
+  m_FogDensity: 0.08
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
@@ -1739,7 +1739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &61270843
 Transform:
   m_ObjectHideFlags: 0
@@ -16874,7 +16874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &358162927
 Transform:
   m_ObjectHideFlags: 0
@@ -27299,6 +27299,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: side bedroom lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 6692186229927125036, guid: 2bbb7ac30e7c67f4cae7963a1a9e62a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbb7ac30e7c67f4cae7963a1a9e62a3, type: 3}
 --- !u!4 &536209609 stripped
@@ -29732,17 +29737,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b039196e79caf1e4284bf0fead56cf63,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.898823
+      value: -8.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b039196e79caf1e4284bf0fead56cf63,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.673309
+      value: -15.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b039196e79caf1e4284bf0fead56cf63,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.1813526
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b039196e79caf1e4284bf0fead56cf63,
         type: 3}
@@ -46853,7 +46858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &829720381
 Transform:
   m_ObjectHideFlags: 0
@@ -49200,7 +49205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &892930694
 Light:
   m_ObjectHideFlags: 0
@@ -60352,6 +60357,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diningroom lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 6692186229927125036, guid: 2bbb7ac30e7c67f4cae7963a1a9e62a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbb7ac30e7c67f4cae7963a1a9e62a3, type: 3}
 --- !u!4 &1109601322 stripped
@@ -60461,7 +60471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1112829770
 Light:
   m_ObjectHideFlags: 0
@@ -66535,7 +66545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1239666714
 Transform:
   m_ObjectHideFlags: 0
@@ -79617,7 +79627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1539922807
 Transform:
   m_ObjectHideFlags: 0
@@ -80630,7 +80640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1562468204
 Transform:
   m_ObjectHideFlags: 0
@@ -83520,7 +83530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1606381334
 Transform:
   m_ObjectHideFlags: 0
@@ -85444,7 +85454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1665079999
 Transform:
   m_ObjectHideFlags: 0
@@ -90146,7 +90156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1768113447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99264,6 +99274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Master bedroom lamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6692186229927125036, guid: 2bbb7ac30e7c67f4cae7963a1a9e62a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbb7ac30e7c67f4cae7963a1a9e62a3, type: 3}
@@ -124674,7 +124689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2105366503
 Transform:
   m_ObjectHideFlags: 0
@@ -126897,6 +126912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: livingroom lamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6692186229927125036, guid: 2bbb7ac30e7c67f4cae7963a1a9e62a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbb7ac30e7c67f4cae7963a1a9e62a3, type: 3}

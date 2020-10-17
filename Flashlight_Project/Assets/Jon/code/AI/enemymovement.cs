@@ -27,97 +27,100 @@ public class enemymovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
-        if (!patrol)
+    {
+        if (!pausemenu.paused)
         {
-            if (navmesh)
+            if (!patrol)
             {
-                if (spiderrun && !spiderflash)
+                if (navmesh)
                 {
-                    float dist = Vector3.Distance(body.transform.position, torch.transform.position);
+                    if (spiderrun && !spiderflash)
+                    {
+                        float dist = Vector3.Distance(body.transform.position, torch.transform.position);
 
-                    if (dist > 0.1f)
+                        if (dist > 0.1f)
+                        {
+                            agent.speed = navmeshspeed * 2;
+                            agent.SetDestination(torch.transform.position);
+                        }
+                        else
+                        {
+                            agent.speed = navmeshspeed;
+                            spiderrun = false;
+                        }
+                    }
+                    else if (!spiderflash)
+                    {
+                        float dist = Vector3.Distance(body.transform.position, player.transform.position);
+
+                        if (speedonplayerdist) agent.speed = dist; agent.acceleration = dist;
+
+                        if (dist > 2f) agent.SetDestination(player.transform.position);
+
+                        body.transform.position = this.transform.position;      // just in case
+                        body.transform.rotation = this.transform.rotation;
+                    }
+
+                    if (spiderflash)
                     {
                         agent.speed = navmeshspeed * 2;
-                        agent.SetDestination(torch.transform.position);
+                        agent.SetDestination(Goto_points[0].transform.position);
                     }
                     else
                     {
                         agent.speed = navmeshspeed;
-                        spiderrun = false;
                     }
                 }
-                else if(!spiderflash)
+                else
                 {
-                    float dist = Vector3.Distance(body.transform.position, player.transform.position);
-
-                    if (speedonplayerdist) agent.speed = dist; agent.acceleration = dist;
-
-                    if (dist > 2f) agent.SetDestination(player.transform.position);
+                    transform.position = Vector3.Lerp(transform.position, player.transform.position, notnavspeed);
 
                     body.transform.position = this.transform.position;      // just in case
                     body.transform.rotation = this.transform.rotation;
-                }
 
-                if (spiderflash)
+                }
+            }
+            else
+            {
+                if (pointno == Goto_points.Length)
                 {
-                    agent.speed = navmeshspeed * 2;
-                    agent.SetDestination(Goto_points[0].transform.position);
+                    Destroy(this.gameObject);
+                    Destroy(this);
+
                 }
                 else
                 {
-                    agent.speed = navmeshspeed;
-                }
-            }
-            else
-            {
-                transform.position = Vector3.Lerp(transform.position, player.transform.position, notnavspeed);
+                    float dist = Vector3.Distance(body.transform.position, Goto_points[pointno].transform.position);
 
-                body.transform.position = this.transform.position;      // just in case
-                body.transform.rotation = this.transform.rotation;
-
-            }
-        }
-        else
-        {
-            if (pointno == Goto_points.Length)
-            {
-                Destroy(this.gameObject);
-                Destroy(this);
-
-            }
-            else
-            {
-                float dist = Vector3.Distance(body.transform.position, Goto_points[pointno].transform.position);
-
-                if (dist <= 4)       // Distance to point before moving on.
-                {
-                    if (pointno < Goto_points.Length)
+                    if (dist <= 4)       // Distance to point before moving on.
                     {
-                        pointno++;
+                        if (pointno < Goto_points.Length)
+                        {
+                            pointno++;
+                        }
+
                     }
 
-                }
+                    //if(pointno > (Goto_points.Length - 1))
+                    //{
+                    //    pointno = 0;
+                    //}
 
-                //if(pointno > (Goto_points.Length - 1))
-                //{
-                //    pointno = 0;
-                //}
+                    if (navmesh)
+                    {
+                        float playerdist = Vector3.Distance(body.transform.position, player.transform.position);
 
-                if (navmesh)
-                {
-                    float playerdist = Vector3.Distance(body.transform.position, player.transform.position);
+                        if (speedonplayerdist) agent.speed = playerdist;
 
-                    if (speedonplayerdist) agent.speed = playerdist;
-
-                    agent.SetDestination(Goto_points[pointno].transform.position);
-                }
-                else
-                {
-                    var lookPos = Goto_points[pointno].transform.position - transform.position;
-                    lookPos.x = 0;
-                    transform.rotation = Quaternion.LookRotation(lookPos);
-                    transform.position = Vector3.Lerp(transform.position, Goto_points[pointno].transform.position, notnavspeed);
+                        agent.SetDestination(Goto_points[pointno].transform.position);
+                    }
+                    else
+                    {
+                        var lookPos = Goto_points[pointno].transform.position - transform.position;
+                        lookPos.x = 0;
+                        transform.rotation = Quaternion.LookRotation(lookPos);
+                        transform.position = Vector3.Lerp(transform.position, Goto_points[pointno].transform.position, notnavspeed);
+                    }
                 }
             }
         }

@@ -21,9 +21,12 @@ public class sway : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        y += verticalSway * Mathf.Sin((swaySpeed * 2) * Time.time);
-        x += horiztonalSway * Mathf.Sin(swaySpeed * Time.time);
-        transform.localPosition = new Vector3(x, y, transform.localPosition.z);
+        if (!pausemenu.paused)
+        {
+            y += verticalSway * Mathf.Sin((swaySpeed * 2) * Time.time);
+            x += horiztonalSway * Mathf.Sin(swaySpeed * Time.time);
+            transform.localPosition = new Vector3(x, y, transform.localPosition.z);
+        }
     }
 
 }

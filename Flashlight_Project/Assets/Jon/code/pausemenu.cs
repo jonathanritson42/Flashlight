@@ -24,17 +24,26 @@ public class pausemenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && pausemenuobj.activeInHierarchy)
         {
             pausemenuobj.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+            paused = false;
+
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
             paused = true;
+            GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+            Cursor.lockState = CursorLockMode.Confined;
             pausemenuobj.SetActive(true);
         }
     }
 
     void resumegame()
     {
+        print("resume");
         pausemenuobj.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
         paused = false;
     }
 
