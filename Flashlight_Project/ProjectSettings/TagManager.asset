@@ -8,6 +8,7 @@ TagManager:
   - Lamp
   - Objects
   - Enemy
+  - clonetorch
   layers:
   - Default
   - TransparentFX

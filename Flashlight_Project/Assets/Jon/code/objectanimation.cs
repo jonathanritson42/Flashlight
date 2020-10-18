@@ -13,6 +13,8 @@ public class objectanimation : MonoBehaviour
     public bool bookshelf;
     public bool tv;
     public bool singlediningchair;
+    public bool chair2;
+    public bool bed2;
 
     [Header("Trigger")]
     public bool triggered;
@@ -42,6 +44,8 @@ public class objectanimation : MonoBehaviour
         if (bookshelf) anim.SetTrigger("bookshelf");
         if (tv) this.gameObject.SetActive(false);
         if (singlediningchair) anim.SetTrigger("singlediningchair");
+        if (chair2) anim.SetTrigger("chair2");
+        if (bed2) anim.SetTrigger("bed2");
 
         Destroy(this);
     }

@@ -6,8 +6,6 @@ public class ReverbSwitch : MonoBehaviour
 {
     public int ReverbZone;
 
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

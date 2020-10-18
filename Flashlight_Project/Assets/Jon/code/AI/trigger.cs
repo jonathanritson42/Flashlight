@@ -5,9 +5,11 @@ using UnityEngine;
 public class trigger : MonoBehaviour
 {
     public GameObject spider;
-    public AudioSource AS;
+    public AudioSource audioSource;
 
-    private bool triggered;
+    private bool triggered, once;
+
+    float vol = 0;
 
     private void Start()
     {
@@ -16,41 +18,49 @@ public class trigger : MonoBehaviour
 
     private void Update()
     {
+        if (pausemenu.paused)
+        {
+            if (audioSource != null) audioSource.Pause();
+        }
+        else 
+        {
+            if (audioSource != null) audioSource.UnPause();
+        }
+
         if (triggered)
         {
             triggered = false;
 
-            AS.Play();
+            if(audioSource != null) audioSource.Play();
 
-            StartCoroutine(volume());
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
             spider.gameObject.SetActive(true);
 
-            if (AS == null) Destroy(this.gameObject);
-
-            triggered = true;
+            if(!once && audioSource != null)  StartCoroutine(volume());
 
             GetComponent<Collider>().enabled = false;
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>())
+        {
+            triggered = true;
+        }
+    }
+
     IEnumerator volume()
     {
-        float vol = 0;
+        once = true;
 
         while (vol < 0.2)
         {
-            AS.volume = vol;
+            audioSource.volume = vol;
 
             vol += 0.001f;
             yield return new WaitForSeconds(0.0001f);
-
         }
+
+        StopCoroutine(volume());
     }
 }

@@ -13,35 +13,66 @@ public class enemymovement : MonoBehaviour
     public GameObject[] Goto_points;
     private NavMeshAgent agent;
     private int pointno;
-    public static bool spiderrun, spiderflash;
-    public GameObject torch;
+    public static bool spiderrun, spidercatch, running;
     private float navmeshspeed;
+    public Collider torchbounds;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponentInChildren<NavMeshAgent>();
         navmeshspeed = agent.speed;
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!pausemenu.paused)
+        if (pausemenu.paused)
         {
-            if (!patrol)
+            agent.isStopped = true;
+            GetComponentInChildren<AudioSource>().Pause();
+            return;
+        }
+        else 
+        {
+            agent.isStopped = false;
+            GetComponentInChildren<AudioSource>().UnPause();
+
+        }
+
+        if (spidercatch)
+        {
+            agent.speed = navmeshspeed * 2;
+            GameObject clone = GameObject.FindGameObjectWithTag("clonetorch");
+            agent.SetDestination(clone.transform.position);
+        }
+        else
+        {
+            agent.speed = navmeshspeed;
+        }
+
+        if (running)
+        {
+            agent.speed = navmeshspeed * 2;
+            agent.SetDestination(Goto_points[0].transform.position);
+        }
+        else
+        {
+            agent.speed = navmeshspeed;
+        }
+
+        if (!patrol && !spidercatch && !running)
             {
                 if (navmesh)
                 {
-                    if (spiderrun && !spiderflash)
+                    if (spiderrun && !spidercatch)
                     {
-                        float dist = Vector3.Distance(body.transform.position, torch.transform.position);
+                        float dist = Vector3.Distance(body.transform.position, Camera.main.transform.position);
 
                         if (dist > 0.1f)
                         {
                             agent.speed = navmeshspeed * 2;
-                            agent.SetDestination(torch.transform.position);
+                            agent.SetDestination(Camera.main.transform.position);
                         }
                         else
                         {
@@ -49,7 +80,7 @@ public class enemymovement : MonoBehaviour
                             spiderrun = false;
                         }
                     }
-                    else if (!spiderflash)
+                    else if (!spidercatch)
                     {
                         float dist = Vector3.Distance(body.transform.position, player.transform.position);
 
@@ -60,18 +91,8 @@ public class enemymovement : MonoBehaviour
                         body.transform.position = this.transform.position;      // just in case
                         body.transform.rotation = this.transform.rotation;
                     }
-
-                    if (spiderflash)
-                    {
-                        agent.speed = navmeshspeed * 2;
-                        agent.SetDestination(Goto_points[0].transform.position);
-                    }
-                    else
-                    {
-                        agent.speed = navmeshspeed;
-                    }
                 }
-                else
+                else if(!spidercatch)
                 {
                     transform.position = Vector3.Lerp(transform.position, player.transform.position, notnavspeed);
 
@@ -79,9 +100,10 @@ public class enemymovement : MonoBehaviour
                     body.transform.rotation = this.transform.rotation;
 
                 }
-            }
-            else
-            {
+        }
+
+        else if (!spidercatch && !running)
+        {
                 if (pointno == Goto_points.Length)
                 {
                     Destroy(this.gameObject);
@@ -122,36 +144,50 @@ public class enemymovement : MonoBehaviour
                         transform.position = Vector3.Lerp(transform.position, Goto_points[pointno].transform.position, notnavspeed);
                     }
                 }
-            }
+        }
+
+        if (running)
+        {
+            agent.SetDestination(Goto_points[0].transform.position);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Lamp>().state == LampState.STOLEN)
+        if (other.gameObject.tag == "clonetorch")
         {
-            other.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+            spidercatch = false;
+        }
+
+        if (other.gameObject.tag == "Player" && other.gameObject.GetComponentInParent<Lamp>().state == LampState.STOLEN)
+        {
+            other.gameObject.GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
             StartCoroutine(Camera.main.GetComponentInChildren<fadeinout>().fadeandLoadAsyncDeath());
         }
 
-        if (other.gameObject.GetComponent<flashlight>())
+        if (other == player.GetComponent<BoxCollider>())
         {
-            spiderflash = true;
+            spidercatch = true;
+            other.GetComponentInParent<Lamp>().Stolen();
         }
 
         if (other.gameObject.name == "spiderpoint")
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
+        }
 
+        if (other == torchbounds)
+        {
+            running = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.GetComponent<flashlight>())
+        if (other == torchbounds)
         {
-            spiderflash = false;
+            running = false;
         }
     }
 }

@@ -112,6 +112,7 @@ public class fadeinout : MonoBehaviour
 
         }
 
+        pausemenu.paused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         print("next");
@@ -133,6 +134,7 @@ public class fadeinout : MonoBehaviour
 
         }
 
+        pausemenu.paused = false;
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
     }

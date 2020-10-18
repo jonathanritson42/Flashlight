@@ -30,6 +30,9 @@ public class Lamp : MonoBehaviour
 
     public GameObject UItext;
 
+    public GameObject torchplacement;
+    private GameObject clone;
+
     private void Start()
     {
         //state = LampState.NOTORCH;
@@ -49,12 +52,14 @@ public class Lamp : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Enemy") && state != LampState.STOLEN)
         {
-            Stolen();
+            //Stolen();
         }
     }
 
     public void Update()
     {
+
+
         if(state == LampState.PICKEDUP)
         {
             if (lt.intensity == 0)
@@ -97,7 +102,7 @@ public class Lamp : MonoBehaviour
                     StartCoroutine("PowerUp");
                 }
             }
-            if(timer >= 5)
+            if(timer >= delay - 5)
             {
                 lt.intensity -= 3 * Time.deltaTime;
             }
@@ -106,6 +111,8 @@ public class Lamp : MonoBehaviour
 
     IEnumerator PowerUp()
     {
+        StopCoroutine(CoolDown());
+
         //lightSource.gameObject.SetActive(true);
         while (lt.intensity != 30f)
         {
@@ -119,7 +126,7 @@ public class Lamp : MonoBehaviour
     IEnumerator CoolDown()
     {
         lightSource.enabled = true;
-
+        enemymovement.running = true;
         yield return new WaitForSeconds(delay);
         state = LampState.COOLDOWN;
         while (lt.intensity != 0.0)
@@ -131,33 +138,42 @@ public class Lamp : MonoBehaviour
         state = LampState.PICKEDUP;
         mashAmount = 0;
 
+        enemymovement.running = false;
         lightSource.enabled = false;
-
     }
 
     void PickedUp()
     {
-        lamp.transform.parent = this.transform.parent;
+        //lamp.transform.parent = this.transform.parent;
         //lamp.transform.position = lampPosition.transform.position;
         lightcoll.enabled = true;
+        lamp.SetActive(true);
+        lt.enabled = true;
+        UItext.SetActive(true);
 
+        Destroy(clone);
 
         //lamp.GetComponent<flashlight>().enabled = true;
 
         state = LampState.PICKEDUP;
     }
 
-    void Stolen()
+    public void Stolen()
     {
-        lamp.transform.parent = null;
+        //lamp.transform.parent = null;
 
         //lamp.GetComponent<flashlight>().enabled = false;
 
+        lamp.SetActive(false);
+        lt.enabled = false;
         lightcoll.enabled = false;
         enemymovement.spiderrun = true;
+        UItext.SetActive(false);
 
-        lamp.transform.position = lampLocations[Random.Range(0, lampLocations.Length)].transform.position;
-        lamp.transform.position = new Vector3(lamp.transform.position.x, lamp.transform.position.y - 0.5f, lamp.transform.position.z + 8f);
+        clone = Instantiate(torchplacement, lampLocations[Random.Range(0, lampLocations.Length)].transform.position + new Vector3(0, -0.5f,0), new Quaternion(torchplacement.transform.rotation.x, torchplacement.transform.rotation.y, torchplacement.transform.rotation.z , torchplacement.transform.rotation.w));
+
+        //lamp.transform.position = lampLocations[Random.Range(0, lampLocations.Length)].transform.position;
+        //lamp.transform.position = new Vector3(lamp.transform.position.x, lamp.transform.position.y - 0.5f, lamp.transform.position.z + 8f);
         state = LampState.STOLEN;
     }
 }
