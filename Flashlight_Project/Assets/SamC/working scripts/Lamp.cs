@@ -33,6 +33,8 @@ public class Lamp : MonoBehaviour
     public GameObject torchplacement;
     private GameObject clone;
 
+    float chargetime;
+
     private void Start()
     {
         //state = LampState.NOTORCH;
@@ -41,6 +43,7 @@ public class Lamp : MonoBehaviour
         lt.intensity = 0;
         lightSource.enabled = false;
         UItext.SetActive(false);
+        chargetime = 0;
 
     }
 
@@ -58,11 +61,11 @@ public class Lamp : MonoBehaviour
 
     public void Update()
     {
-
+        chargetime += 0.1f;
 
         if(state == LampState.PICKEDUP)
         {
-            if (lt.intensity == 0)
+            if (lt.intensity == 0 && chargetime < 100)
             {
                 UItext.SetActive(true);
             }

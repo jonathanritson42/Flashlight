@@ -14,19 +14,23 @@ public class enemymovement : MonoBehaviour
     private NavMeshAgent agent;
     private int pointno;
     public static bool spiderrun, spidercatch, running;
-    private float navmeshspeed;
+    private float navmeshspeed, chase;
     public Collider torchbounds;
+    private bool check;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponentInChildren<NavMeshAgent>();
         navmeshspeed = agent.speed;
+        chase = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        chase += 0.01f;
+
         if (pausemenu.paused)
         {
             agent.isStopped = true;
@@ -148,7 +152,24 @@ public class enemymovement : MonoBehaviour
 
         if (running)
         {
-            agent.SetDestination(Goto_points[0].transform.position);
+            float dist = Vector3.Distance(body.transform.position, Goto_points[0].transform.position);
+            float dist1 = Vector3.Distance(body.transform.position, Goto_points[1].transform.position);
+
+            if (dist >= 5 && !check)
+            {
+                check = false;
+                agent.SetDestination(Goto_points[0].transform.position);
+            }
+            else if(dist1 >= 5)
+            {
+                check = true;
+                agent.SetDestination(Goto_points[1].transform.position);
+            }
+
+            if (chase > 10)
+            {
+                running = false;
+            }
         }
     }
 
@@ -179,6 +200,7 @@ public class enemymovement : MonoBehaviour
 
         if (other == torchbounds)
         {
+            chase = 0;
             running = true;
         }
     }

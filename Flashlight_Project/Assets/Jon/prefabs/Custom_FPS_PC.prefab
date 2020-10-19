@@ -237,7 +237,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bd8763b8766803a449e4d96f9c39a47b, type: 3}
   - {fileID: 8300000, guid: 4bb3a37fb78dd7144a0a08b634214a9c, type: 3}
   - {fileID: 8300000, guid: ef1a37227de5ab34886ce5b614d70ed4, type: 3}
-  - {fileID: 8300000, guid: 5a1bf68fdbf792a48bac9aeec11fd1f9, type: 3}
+  - {fileID: 8300000, guid: 3e3e0660f4c7ed949869ea4287cf7a68, type: 3}
   - {fileID: 8300000, guid: b3a25c04ca896cf41861ae34b7b68505, type: 3}
   - {fileID: 8300000, guid: db6c8476cabd9404e82296dc3045649a, type: 3}
   - {fileID: 8300000, guid: 0232787d0b80c034981439c7a56435d5, type: 3}
@@ -251,6 +251,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 855f552beccee664885aa955c628bf63, type: 3}
   - {fileID: 8300000, guid: e9b92f92438634548be664ee007e9662, type: 3}
   - {fileID: 8300000, guid: f4e6fbd424b5e824dab07bf2cb75ed9b, type: 3}
+  - {fileID: 0}
   Scriptpool:
   - "Bloody rain. Lord\u2019s got it out for me today."
   - "Right, those are definitely locked. One hundred percent.  I\u2019m looking at
@@ -289,6 +290,7 @@ MonoBehaviour:
   - woahh ... why does the painting look like the hallway? it's almost like a portal...
   - huh what's this... A torch? ... This wasn't here before ... I wonder if i can
     use it on anything.
+  - 
   text_speed: 0.06
   change_delay: 0.3
   Start_delay: 0
